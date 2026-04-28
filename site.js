@@ -1166,13 +1166,23 @@ const renderCitationNetwork = (mapData) => {
     }
     const sourceInst = (source.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
     const targetInst = (target.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
+    const sourceInstitutionsText = sourceInst.length
+      ? formatList(sourceInst, 2)
+      : pageLang === "zh"
+        ? "暂无机构元数据"
+        : "No institution metadata available";
+    const targetInstitutionsText = targetInst.length
+      ? formatList(targetInst, 2)
+      : pageLang === "zh"
+        ? "暂无机构元数据"
+        : "No institution metadata available";
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "跨地区引用共现" : "Cross-Region Link",
       title: `${nodeLabel(source)} ↔ ${nodeLabel(target)}`,
       body:
         pageLang === "zh"
-          ? `${edge.weight} 篇引用作品的作者机构同时连接这两个地区。代表机构：${formatList([...sourceInst, ...targetInst], 4)}。`
-          : `${edge.weight} citing works connect these regions through author institutions. Representative institutions: ${formatList([...sourceInst, ...targetInst], 4)}.`,
+          ? `${edge.weight} 篇引用作品的作者机构同时连接这两个地区。${nodeLabel(source)}：${sourceInstitutionsText}；${nodeLabel(target)}：${targetInstitutionsText}。`
+          : `${edge.weight} citing works connect these regions through author institutions. ${nodeLabel(source)}: ${sourceInstitutionsText}; ${nodeLabel(target)}: ${targetInstitutionsText}.`,
     });
   };
 
