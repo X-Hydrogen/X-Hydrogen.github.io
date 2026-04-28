@@ -1022,7 +1022,7 @@ const renderImpactMap = (mapData) => {
   mapState.pathEls.clear();
   mapState.labelEls.clear();
   mapState.haloEls.clear();
-  mapState.hoverNodeId = mapData.nodes[0]?.id || mapData.center.id;
+  mapState.hoverNodeId = mapData.nodes.find((node) => node.id === "us")?.id || mapData.nodes[0]?.id || mapData.center.id;
   mapRoot.innerHTML = "";
   updateMetricNodes({
     citations: mapData.author?.citedByCount || staticMetrics.citations,
