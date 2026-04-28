@@ -1143,18 +1143,12 @@ const renderCitationNetwork = (mapData) => {
   const radius = 255;
 
   const describeNode = (node) => {
-    const institutions = (node.institutions || []).map((item) => citationInstitutionName(item));
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "引用地区节点" : "Citation Region",
       title: `${nodeLabel(node)} · ${new Intl.NumberFormat("en-US").format(node.citations)} ${pageLang === "zh" ? "篇引用作品" : "citing works"}`,
-      body:
-        institutions.length > 0
-          ? pageLang === "zh"
-            ? `代表性引用机构：${formatList(institutions, 4)}。`
-            : `Representative citing institutions: ${formatList(institutions, 4)}.`
-          : pageLang === "zh"
-            ? "该节点代表引用作品作者机构所在国家/地区。"
-            : "This node represents author-institution geography in citing works.",
+      body: pageLang === "zh"
+        ? "该节点代表引用作品作者机构所在国家/地区。"
+        : "This node represents author-institution geography in citing works.",
     });
   };
 
@@ -1164,25 +1158,12 @@ const renderCitationNetwork = (mapData) => {
     if (!source || !target) {
       return;
     }
-    const sourceInst = (source.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
-    const targetInst = (target.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
-    const sourceInstitutionsText = sourceInst.length
-      ? formatList(sourceInst, 2)
-      : pageLang === "zh"
-        ? "暂无机构元数据"
-        : "No institution metadata available";
-    const targetInstitutionsText = targetInst.length
-      ? formatList(targetInst, 2)
-      : pageLang === "zh"
-        ? "暂无机构元数据"
-        : "No institution metadata available";
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "跨地区引用共现" : "Cross-Region Link",
       title: `${nodeLabel(source)} ↔ ${nodeLabel(target)}`,
-      body:
-        pageLang === "zh"
-          ? `${edge.weight} 篇引用作品的作者机构同时连接这两个地区。${nodeLabel(source)}：${sourceInstitutionsText}；${nodeLabel(target)}：${targetInstitutionsText}。`
-          : `${edge.weight} citing works connect these regions through author institutions. ${nodeLabel(source)}: ${sourceInstitutionsText}; ${nodeLabel(target)}: ${targetInstitutionsText}.`,
+      body: pageLang === "zh"
+        ? `${edge.weight} 篇引用作品同时连接这两个地区。`
+        : `${edge.weight} citing works connect these regions.`,
     });
   };
 
