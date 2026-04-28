@@ -31,7 +31,7 @@ const collaborationSummaryNode = document.getElementById("collaboration-node-sum
 const collaborationMetaNode = document.getElementById("collaboration-node-meta");
 
 const scholarProfileUrl = "https://scholar.google.com/citations?user=CcOsCzwAAAAJ&hl=en";
-const dataVersion = "20260428b";
+const dataVersion = "20260428c";
 
 const defaultMapData = {
   center: {
@@ -582,13 +582,7 @@ const updateMapInfo = () => {
         : `${regionLabel(hoverRegion)} · Citation geography node`;
   }
   if (nodeInstitutionsNode) {
-    const institutions = nodeInstitutions(hoverNode);
     nodeInstitutionsNode.innerHTML = "";
-    institutions.slice(0, 4).forEach((institution) => {
-      const item = document.createElement("li");
-      item.textContent = institutionName(institution);
-      nodeInstitutionsNode.appendChild(item);
-    });
   }
   if (toolbarNoteNode) {
     toolbarNoteNode.textContent =
@@ -645,6 +639,138 @@ const edgePath = (source, target) => {
   return `M ${source.x} ${source.y} Q ${mx} ${my} ${target.x} ${target.y}`;
 };
 
+const collaborationActiveNodePriority = [
+  "Tsinghua University",
+  "Peking University",
+  "Lawrence Berkeley National Laboratory",
+  "University of Oxford",
+  "University of Pennsylvania",
+  "Energy Storage Systems (United States)",
+  "Massachusetts Institute of Technology",
+  "Brown University",
+  "Oak Ridge National Laboratory",
+  "The University of Melbourne",
+  "Chinese Academy of Sciences",
+  "Monash University",
+  "University of California, Berkeley",
+  "Western Sydney University",
+  "University of Tennessee at Knoxville",
+  "Molecular Foundry",
+  "KU Leuven",
+  "Max Planck Institute for Chemical Physics of Solids",
+  "Nanyang Technological University",
+  "F5 Networks (United States)",
+  "RMIT University",
+  "University of Science and Technology of China",
+  "Queensland University of Technology",
+  "Science Oxford",
+  "Humboldt-Universität zu Berlin",
+  "University of Washington",
+  "Double Helix (United States)",
+  "NeoPhotonics (United States)",
+  "Canadian Light Source (Canada)",
+  "Pennsylvania State University",
+  "Technische Universität Darmstadt",
+  "University of Technology Sydney",
+  "University of Hong Kong",
+  "Hong Kong Polytechnic University",
+  "Curtin University",
+  "The University of Queensland",
+  "Centre National de la Recherche Scientifique",
+  "Shanghai Jiao Tong University",
+  "University of Chinese Academy of Sciences",
+  "Shenzhen Bay Laboratory",
+  "Nanjing University",
+  "Applied Precision (Slovakia)",
+  "Department of Mines and Petroleum",
+  "Hong Kong University of Science and Technology",
+  "Shenzhen University",
+  "Fudan University",
+  "Wuhan University",
+  "City University of Hong Kong",
+  "Tamkang University",
+  "Shanghai Institute of Applied Physics",
+  "Hong Kong Baptist University",
+  "Zhejiang University",
+  "École Nationale Supérieure d'Ingénieurs de Caen",
+  "Laboratoire Catalyse et Spectrochimie",
+  "Normandie Université",
+  "Université de Caen Normandie",
+  "University of Nottingham Ningbo China",
+  "Aalborg University",
+  "Institute of Oceanology",
+  "State Key Laboratory of Rare Earth Materials Chemistry and Application",
+  "Jilin University",
+  "China University of Mining and Technology",
+  "University of Saskatchewan",
+  "Shanghai Advanced Research Institute",
+  "Adaptive Biotechnologies (United States)",
+  "National Institute of Fashion Technology",
+  "National Engineering Research Center for Nanotechnology",
+  "Energy International (United States)",
+  "Georgi Nadjakov Institute of Solid State Physics",
+  "Institute of Process Engineering",
+  "Rolls-Royce (United Kingdom)",
+  "University City Science Center",
+  "University of Seoul",
+  "Yonsei University",
+  "Institute of Bioorganic Chemistry",
+  "Chongqing University",
+  "Korea University",
+  "Dimensional Imaging (United Kingdom)",
+  "Hokkaido University",
+  "Southern University of Science and Technology",
+  "Foundry (United Kingdom)",
+  "Fraunhofer Research Institution for Materials Recycling and Resource Strategies IWKShe Czech Republic",
+  "Institute of Construction and Architecture of the Slovak Academy of Sciences",
+];
+
+const normalizeCollaborationName = (value) =>
+  (value || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const buildCollaborationInstitutionCards = (nodes) => {
+  const orderByName = new Map(
+    collaborationActiveNodePriority.map((name, index) => [normalizeCollaborationName(name), index])
+  );
+  const prioritized = [];
+  const other = [];
+
+  nodes.forEach((node) => {
+    const key = normalizeCollaborationName(institutionName(node));
+    if (orderByName.has(key)) {
+      prioritized.push({ node, order: orderByName.get(key) });
+    } else {
+      other.push(node);
+    }
+  });
+
+  prioritized.sort((a, b) => a.order - b.order);
+
+  const displayNodes = prioritized.map(({ node }) => node);
+  if (other.length) {
+    displayNodes.push({
+      id: "__collaboration_other__",
+      nameEn: "Other",
+      nameZh: "其他",
+      isOtherBucket: true,
+      hiddenNodes: other,
+      paperCount: other.reduce((sum, node) => sum + (node.paperCount || 0), 0),
+      authors: [...new Set(other.flatMap((node) => node.authors || []))].slice(0, 4),
+      city: "",
+      country: "",
+      countryZh: "",
+      region: "",
+    });
+  }
+
+  return displayNodes;
+};
+
 const setCollaborationActiveNode = (nodeId) => {
   if (!collaborationState.data) {
     return;
@@ -699,20 +825,21 @@ const renderInstitutionNetwork = (networkData) => {
     return;
   }
 
-  const nodes = networkData.institutions || [];
+  const nodes = buildCollaborationInstitutionCards(networkData.institutions || []);
 
   institutionNetworkRoot.innerHTML = "";
   nodes.forEach((node) => {
-    const region = mapState.data.regions.find((item) => item.id === node.region) || mapState.data.regions[0];
     const card = document.createElement("article");
     card.className = "institution-card";
     card.dataset.nodeId = node.id;
-    card.style.setProperty("--card-color", regionColorById(node.region));
+    card.style.setProperty("--card-color", node.isOtherBucket ? "#8a8f98" : regionColorById(node.region));
     card.tabIndex = 0;
 
     const logo = document.createElement("span");
     logo.className = "institution-logo";
-    if (node.logoUrl) {
+    if (node.isOtherBucket) {
+      logo.textContent = pageLang === "zh" ? "其" : "OT";
+    } else if (node.logoUrl) {
       const image = document.createElement("img");
       image.src = node.logoUrl;
       image.alt = "";
@@ -728,16 +855,22 @@ const renderInstitutionNetwork = (networkData) => {
 
     const type = document.createElement("p");
     type.className = "institution-type";
-    type.textContent =
-      pageLang === "zh"
-        ? `${regionLabel(region)} · ${institutionCountry(node)}`
-        : `${regionLabel(region)} · ${institutionCountry(node)}`;
+    type.textContent = node.isOtherBucket
+      ? pageLang === "zh"
+        ? `其他 · ${node.hiddenNodes.length} 个机构`
+        : `Other · ${node.hiddenNodes.length} institutions`
+      : pageLang === "zh"
+        ? `${regionLabel(mapState.data.regions.find((item) => item.id === node.region) || mapState.data.regions[0])} · ${institutionCountry(node)}`
+        : `${regionLabel(mapState.data.regions.find((item) => item.id === node.region) || mapState.data.regions[0])} · ${institutionCountry(node)}`;
 
     const title = document.createElement("h3");
     title.textContent = institutionName(node);
 
     const list = document.createElement("ul");
-    node.authors.slice(0, 4).forEach((author) => {
+    const listItems = node.isOtherBucket
+      ? node.hiddenNodes.slice(0, 4).map((item) => institutionName(item))
+      : (node.authors || []).slice(0, 4);
+    listItems.forEach((author) => {
       const item = document.createElement("li");
       item.textContent = author;
       list.appendChild(item);
@@ -745,19 +878,24 @@ const renderInstitutionNetwork = (networkData) => {
 
     const meta = document.createElement("p");
     meta.className = "institution-meta";
-    meta.textContent =
-      pageLang === "zh"
+    meta.textContent = node.isOtherBucket
+      ? pageLang === "zh"
+        ? `${node.paperCount} 篇论文 · 已合并为其他项`
+        : `${node.paperCount} papers · merged into Other`
+      : pageLang === "zh"
         ? `${node.paperCount} 篇论文 · 点击聚焦网络`
         : `${node.paperCount} papers · click to focus network`;
 
     card.append(logo, type, title, list, meta);
-    card.addEventListener("click", () => setCollaborationActiveNode(node.id));
-    card.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        setCollaborationActiveNode(node.id);
-      }
-    });
+    if (!node.isOtherBucket) {
+      card.addEventListener("click", () => setCollaborationActiveNode(node.id));
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setCollaborationActiveNode(node.id);
+        }
+      });
+    }
     institutionNetworkRoot.appendChild(card);
   });
 };
@@ -798,19 +936,48 @@ const renderCollaborationNetwork = (networkData) => {
   const institutionById = new Map(institutions.map((item) => [item.id, item]));
   const primaryInstitution = institutions[0];
   const orbitNodes = institutions.filter((item) => item.id !== primaryInstitution?.id);
+  
+  // Multi-ring radial layout: sort by paperCount and arrange in concentric circles
+  const sortedOrbitNodes = orbitNodes.slice().sort((a, b) => (b.paperCount || 0) - (a.paperCount || 0));
   const layoutById = new Map();
+  const centerX = 720;
+  const centerY = 360;
+  
   if (primaryInstitution) {
-    layoutById.set(primaryInstitution.id, { ...primaryInstitution, x: 720, y: 350 });
+    layoutById.set(primaryInstitution.id, { ...primaryInstitution, x: centerX, y: centerY, angle: 0 });
   }
-  orbitNodes.forEach((node, index) => {
-    const angle = -Math.PI * 0.82 + (index / Math.max(1, orbitNodes.length)) * Math.PI * 1.64;
-    const radiusX = 470 - Math.min(90, node.paperCount * 18);
-    const radiusY = 245 - Math.min(42, node.paperCount * 9);
+  
+  // Distribute nodes across concentric circles based on paper count
+  let nodeIndex = 0;
+  const ringsConfig = [
+    { maxCount: 8, radius: 220, startAngle: -Math.PI * 0.5 },   // Inner ring
+    { maxCount: 12, radius: 380, startAngle: -Math.PI * 0.5 },  // Middle ring
+    { maxCount: 20, radius: 520, startAngle: -Math.PI * 0.5 },  // Outer ring
+  ];
+  
+  let ringIndex = 0;
+  let ringNodeCount = 0;
+  
+  sortedOrbitNodes.forEach((node, idx) => {
+    // Move to next ring if current ring is full
+    while (ringNodeCount >= ringsConfig[ringIndex].maxCount && ringIndex < ringsConfig.length - 1) {
+      ringIndex++;
+      ringNodeCount = 0;
+    }
+    
+    const config = ringsConfig[ringIndex];
+    const angle = config.startAngle + (ringNodeCount / Math.max(1, config.maxCount)) * Math.PI * 2;
+    const x = centerX + Math.cos(angle) * config.radius;
+    const y = centerY + Math.sin(angle) * config.radius;
+    
     layoutById.set(node.id, {
       ...node,
-      x: Math.round(720 + Math.cos(angle) * radiusX),
-      y: Math.round(350 + Math.sin(angle) * radiusY),
+      x: Math.round(x),
+      y: Math.round(y),
+      angle: angle,
     });
+    
+    ringNodeCount++;
   });
 
   const center = createSvgNode("circle", {
@@ -887,12 +1054,34 @@ const renderCollaborationNetwork = (networkData) => {
     collaborationState.nodeEls.set(node.id, { group, circle, node });
 
     if (node.paperCount > 1 || institutions.length < 16) {
+      // Position labels radially based on node angle
+      const radius = Math.min(28, 14 + node.paperCount * 5);
+      const ang = plottedNode.angle || 0;
+      const labelDist = radius + 24;
+      const lx = plottedNode.x + Math.cos(ang) * labelDist;
+      const ly = plottedNode.y + Math.sin(ang) * labelDist;
+      
       const label = createSvgNode("text", {
-        x: plottedNode.x,
-        y: plottedNode.y + radius + 22,
+        x: Math.round(lx),
+        y: Math.round(ly),
         class: "collab-node-label",
       });
       label.textContent = shortInstitutionLabel(institutionName(node));
+      
+      // Dynamic text anchor based on angle
+      const cosA = Math.cos(ang);
+      const sinA = Math.sin(ang);
+      
+      if (Math.abs(cosA) < 0.2) {
+        label.setAttribute("text-anchor", "middle");
+      } else if (cosA > 0) {
+        label.setAttribute("text-anchor", "start");
+      } else {
+        label.setAttribute("text-anchor", "end");
+      }
+      
+      label.setAttribute("dominant-baseline", Math.abs(sinA) < 0.3 ? "middle" : "auto");
+      label.setAttribute("pointer-events", "none");
       labelLayer.appendChild(label);
     }
   });
@@ -1215,17 +1404,18 @@ const renderCitationNetwork = (mapData) => {
   });
 
   nodes.forEach((node) => {
-    const group = createSvgNode("g", { transform: `translate(${node.px} ${node.py})` });
+    const plotted = nodeById.get(node.id) || node;
+    const group = createSvgNode("g", { transform: `translate(${plotted.px} ${plotted.py})` });
     const circle = createSvgNode("circle", {
       cx: 0,
       cy: 0,
-      r: Math.max(5, Math.min(15, 4 + Math.sqrt(node.citations))),
+      r: Math.max(5, Math.min(15, 4 + Math.sqrt(plotted.citations || node.citations || 0))),
       class: "citation-ring-node",
     });
     group.appendChild(circle);
     const label = createSvgNode("text", {
-      x: Math.cos(node.angle) * 28,
-      y: Math.sin(node.angle) * 28 + 4,
+      x: Math.cos(plotted.angle || 0) * 28,
+      y: Math.sin(plotted.angle || 0) * 28 + 4,
       class: "citation-ring-label",
     });
     label.textContent = node.label;
@@ -1239,7 +1429,7 @@ const renderCitationNetwork = (mapData) => {
       describeNode(node);
     });
     nodeLayer.appendChild(group);
-    nodeElements.set(node.id, { circle, node });
+    nodeElements.set(node.id, { circle, node: plotted });
   });
 
   const defaultEdge = mapData.network.edges.find(
@@ -1265,8 +1455,9 @@ const renderCitationNetwork = (mapData) => {
     describeEdge(defaultEdge);
     setActiveCitation(null, defaultEdge);
   } else {
-    describeNode(nodes[0]);
-    setActiveCitation(nodes[0].id);
+    const defaultCitationId = nodeById.has("us") ? "us" : nodes[0].id;
+    describeNode(nodeById.get(defaultCitationId) || nodes[0]);
+    setActiveCitation(defaultCitationId);
   }
 };
 

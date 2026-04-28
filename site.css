@@ -860,8 +860,8 @@ a {
 
 .collaboration-layout {
   display: grid;
-  grid-template-columns: minmax(260px, 0.36fr) minmax(0, 0.64fr);
-  gap: 1rem;
+  grid-template-columns: minmax(300px, 0.58fr) minmax(0, 0.42fr);
+  gap: 1.2rem;
   align-items: stretch;
   margin-bottom: 1rem;
 }
@@ -876,21 +876,37 @@ a {
     radial-gradient(circle at 82% 18%, rgba(102, 217, 199, 0.08), transparent 24%),
     linear-gradient(180deg, rgba(12, 24, 44, 0.96), rgba(7, 15, 29, 0.95));
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .collaboration-detail {
   grid-column: 1 / -1;
+  display: grid;
+  align-content: start;
+}
+
+.collaboration-graph-shell,
+.collaboration-map-shell {
+  min-height: 500px;
+  position: relative;
+  overflow: visible;
 }
 
 .collaboration-graph,
 .collaboration-map {
   display: block;
   width: 100%;
-  min-height: 540px;
+  height: 100%;
+}
+
+.collaboration-graph {
+  min-height: 500px;
 }
 
 .collaboration-map {
-  min-height: 340px;
+  max-height: 500px;
 }
 
 .collaboration-detail {
@@ -957,7 +973,7 @@ a {
 .collab-node-initials {
   fill: #132033;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   text-anchor: middle;
   dominant-baseline: middle;
@@ -966,13 +982,13 @@ a {
 .collab-node-label {
   fill: #eaf1fb;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  text-anchor: middle;
   paint-order: stroke;
   stroke: rgba(3, 8, 17, 0.92);
-  stroke-width: 5px;
+  stroke-width: 3px;
   stroke-linejoin: round;
+  pointer-events: none;
 }
 
 .collab-center {
