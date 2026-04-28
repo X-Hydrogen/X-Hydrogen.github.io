@@ -398,23 +398,43 @@ const fetchLiveScholarMetrics = () =>
     })
     .then(parseScholarMetricsFromHtml);
 
-fetchLocalScholarMetrics()
-  .then((response) => {
-    updateMetricNodes(scholarMetricSubset(response));
-    setScholarStatus("local", response);
-    return fetchLiveScholarMetrics()
-      .then((liveMetrics) => {
-        const merged = { ...response, ...liveMetrics };
-        updateMetricNodes(scholarMetricSubset(merged));
-        setScholarStatus("live", merged);
-      })
-      .catch(() => {
-        setScholarStatus("blocked", response);
-      });
-  })
-  .catch(() => {
-    setScholarStatus("failed", staticMetrics);
-  });
+// Prefer previously saved live Scholar metrics (persisted after a successful live sync)
+const persistedLive = (() => {
+  try {
+    const raw = localStorage.getItem("xhyd_scholar_live");
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+})();
+
+if (persistedLive) {
+  updateMetricNodes(scholarMetricSubset(persistedLive));
+  setScholarStatus("live", persistedLive);
+} else {
+  fetchLocalScholarMetrics()
+    .then((response) => {
+      updateMetricNodes(scholarMetricSubset(response));
+      setScholarStatus("local", response);
+      return fetchLiveScholarMetrics()
+        .then((liveMetrics) => {
+          // live metrics override local values; persist for future visits
+          try {
+            localStorage.setItem("xhyd_scholar_live", JSON.stringify(liveMetrics));
+          } catch (e) {
+            // ignore storage failures
+          }
+          updateMetricNodes(scholarMetricSubset(liveMetrics));
+          setScholarStatus("live", liveMetrics);
+        })
+        .catch(() => {
+          setScholarStatus("blocked", response);
+        });
+    })
+    .catch(() => {
+      setScholarStatus("failed", staticMetrics);
+    });
+}
 
 const insideEllipse = (x, y, ellipse) => {
   const nx = (x - ellipse.cx) / ellipse.rx;
