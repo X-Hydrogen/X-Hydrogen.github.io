@@ -450,6 +450,35 @@ const appendWorldLand = (root) => {
 const regionLabel = (region) => (pageLang === "zh" ? region.labelZh : region.labelEn);
 const regionSummary = (region) => (pageLang === "zh" ? region.summaryZh : region.summaryEn);
 const regionCities = (region) => (pageLang === "zh" ? region.citiesZh : region.citiesEn);
+const citationTopRegions = (mapData, region) => {
+  if (!mapData?.network?.nodes?.length || region?.id !== "all") {
+    return regionCities(region);
+  }
+
+  const aggregate = new Map();
+  mapData.network.nodes.forEach((node) => {
+    const key = node.region === "europe" ? "eu" : node.id;
+    const count = Number(node.citations || 0);
+    const label = node.region === "europe"
+      ? pageLang === "zh"
+        ? "欧盟"
+        : "European Union"
+      : pageLang === "zh"
+        ? node.labelZh || node.labelEn || node.label
+        : node.labelEn || node.labelZh || node.label;
+    const current = aggregate.get(key) || { label, citations: 0 };
+    current.citations += count;
+    current.label = label;
+    aggregate.set(key, current);
+  });
+
+  const separator = pageLang === "zh" ? "、" : ", ";
+  return [...aggregate.values()]
+    .sort((left, right) => right.citations - left.citations)
+    .slice(0, 6)
+    .map((item) => item.label)
+    .join(separator);
+};
 const nodeRole = (node) => (pageLang === "zh" ? node.roleZh : node.roleEn);
 const nodeLabel = (node) => (pageLang === "zh" ? node.labelZh || node.label : node.labelEn || node.label);
 const nodeInstitutions = (node) => node.institutions || [];
@@ -536,7 +565,9 @@ const updateMapInfo = () => {
   }
   if (regionCitiesNode) {
     regionCitiesNode.textContent =
-      pageLang === "zh" ? `高频引用地区：${regionCities(region)}` : `Top citing regions: ${regionCities(region)}`;
+      pageLang === "zh"
+        ? `高频引用地区：${citationTopRegions(mapState.data, region)}`
+        : `Top citing regions: ${citationTopRegions(mapState.data, region)}`;
   }
   if (nodeTitleNode) {
     nodeTitleNode.textContent = nodeLabel(hoverNode);
@@ -1220,6 +1251,10 @@ const renderCitationNetwork = (mapData) => {
     nodeElements.set(node.id, { circle, node });
   });
 
+  const defaultEdge = mapData.network.edges.find(
+    (edge) => (edge.source === "cn" && edge.target === "us") || (edge.source === "us" && edge.target === "cn")
+  );
+
   const core = createSvgNode("circle", {
     cx,
     cy,
@@ -1235,8 +1270,13 @@ const renderCitationNetwork = (mapData) => {
   });
   coreText.textContent = pageLang === "zh" ? "引用网络" : "Citations";
   citationNetworkRoot.append(edgeLayer, core, coreText, nodeLayer, labelLayer);
-  describeNode(nodes[0]);
-  setActiveCitation(nodes[0].id);
+  if (defaultEdge) {
+    describeEdge(defaultEdge);
+    setActiveCitation(null, defaultEdge);
+  } else {
+    describeNode(nodes[0]);
+    setActiveCitation(nodes[0].id);
+  }
 };
 
 const renderPapers = (paperData) => {
