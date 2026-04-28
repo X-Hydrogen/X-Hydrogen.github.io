@@ -1,0 +1,169 @@
+{
+  "center": {
+    "id": "beijing",
+    "label": "Beijing",
+    "region": "east-asia",
+    "roleEn": "Primary research base and strongest visible source node.",
+    "roleZh": "主要研究基地，也是当前可见传播网络中的核心源点。",
+    "x": 1148,
+    "y": 268,
+    "r": 10,
+    "labelX": 1168,
+    "labelY": 224,
+    "institutions": [
+      { "nameEn": "Tsinghua University", "nameZh": "清华大学", "typeEn": "Home base", "typeZh": "当前单位" },
+      { "nameEn": "Department of Chemistry, Tsinghua University", "nameZh": "清华大学化学系", "typeEn": "Research base", "typeZh": "研究基地" }
+    ]
+  },
+  "regions": [
+    {
+      "id": "all",
+      "labelEn": "Global",
+      "labelZh": "全球",
+      "summaryEn": "A global overview of collaboration anchored in Beijing and extending across major research hubs.",
+      "summaryZh": "以北京为核心、向全球主要研究中心扩散的整体合作网络视图。",
+      "citiesEn": "Beijing, Madrid, Cambridge, Richland, Brisbane",
+      "citiesZh": "北京、马德里、剑桥、Richland、布里斯班",
+      "color": "#b97cff"
+    },
+    {
+      "id": "east-asia",
+      "labelEn": "East Asia",
+      "labelZh": "东亚",
+      "summaryEn": "The academic origin and strongest collaboration cluster, centered on Beijing and nearby research cities.",
+      "summaryZh": "学术起点与最强合作区域，以北京为核心并延伸到周边研究城市。",
+      "citiesEn": "Beijing, Harbin, Shanghai, Shenzhen, Hong Kong",
+      "citiesZh": "北京、哈尔滨、上海、深圳、香港",
+      "color": "#c085ff",
+      "halo": { "cx": 1160, "cy": 306, "rx": 190, "ry": 130 }
+    },
+    {
+      "id": "asia-pacific",
+      "labelEn": "Asia-Pacific",
+      "labelZh": "亚太",
+      "summaryEn": "An extended Asia-Pacific network spanning Singapore, South Asia, and Australia.",
+      "summaryZh": "从新加坡、南亚到澳大利亚延展出的亚太学术网络。",
+      "citiesEn": "Singapore, Bangalore, Jakarta, Brisbane, Sydney, Melbourne, Perth",
+      "citiesZh": "新加坡、班加罗尔、雅加达、布里斯班、悉尼、墨尔本、珀斯",
+      "color": "#79b4ff",
+      "halo": { "cx": 1140, "cy": 470, "rx": 250, "ry": 150 }
+    },
+    {
+      "id": "europe",
+      "labelEn": "Europe",
+      "labelZh": "欧洲",
+      "summaryEn": "A visible European scholarly corridor with strong academic city nodes and conference-style visibility.",
+      "summaryZh": "在欧洲形成了较清晰的学术传播走廊，覆盖多个高可见度研究城市。",
+      "citiesEn": "Cambridge, Paris, Zurich, Madrid, Riga, Yekaterinburg, Milan",
+      "citiesZh": "剑桥、巴黎、苏黎世、马德里、里加、叶卡捷琳堡、米兰",
+      "color": "#e2c084",
+      "halo": { "cx": 712, "cy": 238, "rx": 270, "ry": 110 }
+    },
+    {
+      "id": "north-america",
+      "labelEn": "North America",
+      "labelZh": "北美",
+      "summaryEn": "North American reach across national labs, universities, and chemistry research audiences.",
+      "summaryZh": "北美区域覆盖国家实验室、高校和化学相关研究社群。",
+      "citiesEn": "Richland, Berkeley, Houston, Toronto, Varennes, Boston",
+      "citiesZh": "Richland、伯克利、休斯敦、多伦多、Varennes、波士顿",
+      "color": "#ff9d80",
+      "halo": { "cx": 230, "cy": 264, "rx": 210, "ry": 150 }
+    },
+    {
+      "id": "middle-east-africa",
+      "labelEn": "Middle East & Africa",
+      "labelZh": "中东与非洲",
+      "summaryEn": "A smaller but meaningful visibility band through the Gulf and southern Africa.",
+      "summaryZh": "在海湾地区与南部非洲形成了较小但明确的传播可见度。",
+      "citiesEn": "Al Ain, Abu Dhabi, Pretoria",
+      "citiesZh": "阿莱茵、阿布扎比、比勒陀利亚",
+      "color": "#6fe0c6",
+      "halo": { "cx": 870, "cy": 410, "rx": 120, "ry": 150 }
+    },
+    {
+      "id": "latin-america",
+      "labelEn": "Latin America",
+      "labelZh": "拉丁美洲",
+      "summaryEn": "A lighter but globally important extension into Latin America.",
+      "summaryZh": "在拉丁美洲也形成了较轻但重要的全球传播延展。",
+      "citiesEn": "Lima, Sao Paulo",
+      "citiesZh": "利马、圣保罗",
+      "color": "#ffd36f",
+      "halo": { "cx": 420, "cy": 548, "rx": 120, "ry": 110 }
+    }
+  ],
+  "nodes": [
+    { "id": "harbin", "label": "Harbin", "region": "east-asia", "roleEn": "Northern China research visibility node.", "roleZh": "中国北方研究可见度节点。", "x": 1212, "y": 228, "r": 6, "labelX": 1194, "labelY": 176 },
+    { "id": "shanghai", "label": "Shanghai", "region": "east-asia", "roleEn": "Eastern China research and collaboration node.", "roleZh": "中国东部研究与合作节点。", "x": 1186, "y": 298, "r": 5 },
+    { "id": "shenzhen", "label": "Shenzhen", "region": "east-asia", "roleEn": "Southern China and Shenzhen Bay Lab linkage.", "roleZh": "中国南方与深圳湾实验室相关节点。", "x": 1128, "y": 334, "r": 5, "institutions": [
+      { "nameEn": "Shenzhen Bay Laboratory", "nameZh": "深圳湾实验室", "typeEn": "Research visit", "typeZh": "访问经历" },
+      { "nameEn": "Southern University of Science and Technology", "nameZh": "南方科技大学", "typeEn": "Regional hub", "typeZh": "区域中心" }
+    ] },
+    { "id": "hong-kong", "label": "Hong Kong", "region": "east-asia", "roleEn": "Regional scholarly visibility corridor.", "roleZh": "区域性学术传播节点。", "x": 1144, "y": 348, "r": 5, "institutions": [
+      { "nameEn": "The University of Hong Kong", "nameZh": "香港大学", "typeEn": "University hub", "typeZh": "高校中心" },
+      { "nameEn": "City University of Hong Kong", "nameZh": "香港城市大学", "typeEn": "Materials hub", "typeZh": "材料研究中心" }
+    ] },
+    { "id": "seoul", "label": "Seoul", "region": "east-asia", "roleEn": "East Asian research audience node.", "roleZh": "东亚研究受众节点。", "x": 1232, "y": 274, "r": 5, "institutions": [
+      { "nameEn": "Seoul National University", "nameZh": "首尔国立大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "tokyo", "label": "Tokyo", "region": "east-asia", "roleEn": "East Asian materials research node.", "roleZh": "东亚材料研究节点。", "x": 1270, "y": 282, "r": 5, "institutions": [
+      { "nameEn": "The University of Tokyo", "nameZh": "东京大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "singapore", "label": "Singapore", "region": "asia-pacific", "roleEn": "Southeast Asian battery and materials visibility node.", "roleZh": "东南亚电池与材料研究节点。", "x": 1048, "y": 422, "r": 6, "institutions": [
+      { "nameEn": "National University of Singapore", "nameZh": "新加坡国立大学", "typeEn": "University hub", "typeZh": "高校中心" },
+      { "nameEn": "Nanyang Technological University", "nameZh": "南洋理工大学", "typeEn": "Materials hub", "typeZh": "材料研究中心" }
+    ] },
+    { "id": "bangalore", "label": "Bangalore", "region": "asia-pacific", "roleEn": "South Asian computational and materials science node.", "roleZh": "南亚计算与材料科学节点。", "x": 962, "y": 354, "r": 6, "labelX": 900, "labelY": 310 },
+    { "id": "jakarta", "label": "Jakarta", "region": "asia-pacific", "roleEn": "Southeast Asian visibility extension.", "roleZh": "东南亚传播延展节点。", "x": 1188, "y": 430, "r": 6, "labelX": 1114, "labelY": 390 },
+    { "id": "brisbane", "label": "Brisbane", "region": "asia-pacific", "roleEn": "Oceania conference and scholar visibility node.", "roleZh": "大洋洲会议与学者传播节点。", "x": 1332, "y": 534, "r": 7, "labelX": 1272, "labelY": 492, "institutions": [
+      { "nameEn": "The University of Queensland", "nameZh": "昆士兰大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "sydney", "label": "Sydney", "region": "asia-pacific", "roleEn": "Australian academic visibility node.", "roleZh": "澳大利亚学术传播节点。", "x": 1314, "y": 566, "r": 6, "institutions": [
+      { "nameEn": "The University of Sydney", "nameZh": "悉尼大学", "typeEn": "University hub", "typeZh": "高校中心" },
+      { "nameEn": "UNSW Sydney", "nameZh": "新南威尔士大学", "typeEn": "Energy materials hub", "typeZh": "能源材料中心" }
+    ] },
+    { "id": "melbourne", "label": "Melbourne", "region": "asia-pacific", "roleEn": "University of Melbourne research linkage.", "roleZh": "墨尔本大学相关研究节点。", "x": 1284, "y": 590, "r": 6, "labelX": 1200, "labelY": 632, "institutions": [
+      { "nameEn": "University of Melbourne", "nameZh": "墨尔本大学", "typeEn": "Research visit", "typeZh": "访问经历" }
+    ] },
+    { "id": "perth", "label": "Perth", "region": "asia-pacific", "roleEn": "Curtin-linked research visibility node.", "roleZh": "与 Curtin University 相关的研究节点。", "x": 1172, "y": 548, "r": 6, "labelX": 1120, "labelY": 596, "institutions": [
+      { "nameEn": "Curtin University", "nameZh": "Curtin University", "typeEn": "Research visit", "typeZh": "访问经历" }
+    ] },
+    { "id": "madrid", "label": "Madrid", "region": "europe", "roleEn": "A major European visibility node.", "roleZh": "欧洲重要传播节点。", "x": 716, "y": 258, "r": 7, "labelX": 658, "labelY": 216, "institutions": [
+      { "nameEn": "Complutense University of Madrid", "nameZh": "马德里康普顿斯大学", "typeEn": "University hub", "typeZh": "高校中心" },
+      { "nameEn": "Autonomous University of Madrid", "nameZh": "马德里自治大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "riga", "label": "Riga", "region": "europe", "roleEn": "Northern Europe visibility node.", "roleZh": "北欧传播节点。", "x": 792, "y": 208, "r": 6, "labelX": 756, "labelY": 156 },
+    { "id": "yekaterinburg", "label": "Yekaterinburg", "region": "europe", "roleEn": "Eurasian scientific visibility node.", "roleZh": "欧亚科研传播节点。", "x": 888, "y": 202, "r": 6, "labelX": 826, "labelY": 146 },
+    { "id": "cambridge", "label": "Cambridge", "region": "europe", "roleEn": "Top-institution scholarly attention node.", "roleZh": "顶尖学术机构关注节点。", "x": 544, "y": 198, "r": 6, "labelX": 466, "labelY": 150, "institutions": [
+      { "nameEn": "University of Cambridge", "nameZh": "剑桥大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "paris", "label": "Paris", "region": "europe", "roleEn": "Western Europe visibility node.", "roleZh": "西欧传播节点。", "x": 632, "y": 236, "r": 5, "institutions": [
+      { "nameEn": "Sorbonne University", "nameZh": "索邦大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "zurich", "label": "Zurich", "region": "europe", "roleEn": "Continental Europe research node.", "roleZh": "欧洲大陆研究节点。", "x": 688, "y": 236, "r": 5, "institutions": [
+      { "nameEn": "ETH Zurich", "nameZh": "苏黎世联邦理工学院", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "milan", "label": "Milan", "region": "europe", "roleEn": "Southern Europe visibility node.", "roleZh": "南欧传播节点。", "x": 718, "y": 280, "r": 5 },
+    { "id": "richland", "label": "Richland", "region": "north-america", "roleEn": "A highly visible North American node.", "roleZh": "北美高可见度节点。", "x": 160, "y": 252, "r": 7, "labelX": 96, "labelY": 206, "institutions": [
+      { "nameEn": "Pacific Northwest National Laboratory", "nameZh": "太平洋西北国家实验室", "typeEn": "National lab hub", "typeZh": "国家实验室中心" }
+    ] },
+    { "id": "berkeley", "label": "Berkeley", "region": "north-america", "roleEn": "US West Coast research node.", "roleZh": "美国西海岸研究节点。", "x": 122, "y": 286, "r": 5, "institutions": [
+      { "nameEn": "University of California, Berkeley", "nameZh": "加州大学伯克利分校", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "houston", "label": "Houston", "region": "north-america", "roleEn": "US energy research visibility node.", "roleZh": "美国能源研究传播节点。", "x": 238, "y": 308, "r": 5 },
+    { "id": "toronto", "label": "Toronto", "region": "north-america", "roleEn": "Canadian academic visibility node.", "roleZh": "加拿大高校传播节点。", "x": 248, "y": 206, "r": 5, "institutions": [
+      { "nameEn": "University of Toronto", "nameZh": "多伦多大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "varennes", "label": "Varennes", "region": "north-america", "roleEn": "Canadian research visibility node.", "roleZh": "加拿大研究传播节点。", "x": 270, "y": 224, "r": 6, "labelX": 232, "labelY": 178 },
+    { "id": "boston", "label": "Boston", "region": "north-america", "roleEn": "Elite university attention corridor.", "roleZh": "顶尖大学关注带。", "x": 302, "y": 220, "r": 5, "institutions": [
+      { "nameEn": "Massachusetts Institute of Technology", "nameZh": "麻省理工学院", "typeEn": "University hub", "typeZh": "高校中心" },
+      { "nameEn": "Harvard University", "nameZh": "哈佛大学", "typeEn": "University hub", "typeZh": "高校中心" }
+    ] },
+    { "id": "al-ain", "label": "Al Ain", "region": "middle-east-africa", "roleEn": "UAE conference visibility node.", "roleZh": "阿联酋会议传播节点。", "x": 882, "y": 332, "r": 6 },
+    { "id": "abu-dhabi", "label": "Abu Dhabi", "region": "middle-east-africa", "roleEn": "Gulf research visibility node.", "roleZh": "海湾地区研究传播节点。", "x": 866, "y": 350, "r": 5 },
+    { "id": "pretoria", "label": "Pretoria", "region": "middle-east-africa", "roleEn": "Southern Africa visibility extension.", "roleZh": "南部非洲传播延展节点。", "x": 820, "y": 500, "r": 6, "labelX": 774, "labelY": 450 },
+    { "id": "lima", "label": "Lima", "region": "latin-america", "roleEn": "Latin American visibility node.", "roleZh": "拉丁美洲传播节点。", "x": 368, "y": 536, "r": 6, "labelX": 330, "labelY": 492 },
+    { "id": "sao-paulo", "label": "Sao Paulo", "region": "latin-america", "roleEn": "South American research visibility node.", "roleZh": "南美研究传播节点。", "x": 468, "y": 594, "r": 5 }
+  ]
+}

@@ -1,0 +1,2973 @@
+{
+  "source": "OpenAlex author A5068379441 cited works and citing works authorship institutions",
+  "generatedAt": "2026-04-28T00:51:28.265Z",
+  "author": {
+    "id": "https://openalex.org/A5068379441",
+    "displayName": "Hengyue Xu",
+    "worksCount": 97,
+    "citedByCount": 3026,
+    "uniqueCitingWorks": 2361
+  },
+  "center": {
+    "id": "source-papers",
+    "label": "Hengyue Xu Works",
+    "labelEn": "Hengyue Xu Works",
+    "labelZh": "徐恒越作品",
+    "region": "east-asia",
+    "roleEn": "All cited works linked to OpenAlex author A5068379441.",
+    "roleZh": "OpenAlex 作者 A5068379441 下全部被引作品。",
+    "x": 1137,
+    "y": 233,
+    "r": 11,
+    "labelX": 1155,
+    "labelY": 189,
+    "institutions": []
+  },
+  "regions": [
+    {
+      "id": "all",
+      "labelEn": "Global",
+      "labelZh": "全球",
+      "summaryEn": "Global citation geography across all OpenAlex works attributed to Hengyue Xu.",
+      "summaryZh": "基于 OpenAlex 作者全集的全球引用地理分布。",
+      "citiesEn": "China, United States, Australia, South Korea, Hong Kong SAR China, India",
+      "citiesZh": "中国、美国、澳大利亚、韩国、中国香港、印度",
+      "color": "#97b4ff"
+    },
+    {
+      "id": "east-asia",
+      "labelEn": "East Asia",
+      "labelZh": "东亚",
+      "summaryEn": "Citation geography within East Asia.",
+      "summaryZh": "东亚区域内的引用地理分布。",
+      "citiesEn": "China, South Korea, Hong Kong SAR China, Taiwan, Japan",
+      "citiesZh": "中国、韩国、中国香港、中国台湾、日本",
+      "color": "#c085ff"
+    },
+    {
+      "id": "asia-pacific",
+      "labelEn": "Asia-Pacific",
+      "labelZh": "亚太",
+      "summaryEn": "Citation geography within Asia-Pacific.",
+      "summaryZh": "亚太区域内的引用地理分布。",
+      "citiesEn": "Australia, India, Singapore, Pakistan, Malaysia, Thailand",
+      "citiesZh": "澳大利亚、印度、新加坡、巴基斯坦、马来西亚、泰国",
+      "color": "#79b4ff"
+    },
+    {
+      "id": "europe",
+      "labelEn": "Europe",
+      "labelZh": "欧洲",
+      "summaryEn": "Citation geography within Europe.",
+      "summaryZh": "欧洲区域内的引用地理分布。",
+      "citiesEn": "Germany, United Kingdom, Poland, France, Russia, Spain",
+      "citiesZh": "德国、英国、波兰、法国、俄罗斯、西班牙",
+      "color": "#e2c084"
+    },
+    {
+      "id": "north-america",
+      "labelEn": "North America",
+      "labelZh": "北美",
+      "summaryEn": "Citation geography within North America.",
+      "summaryZh": "北美区域内的引用地理分布。",
+      "citiesEn": "United States, Canada, Mexico",
+      "citiesZh": "美国、加拿大、墨西哥",
+      "color": "#ff9d80"
+    },
+    {
+      "id": "middle-east-africa",
+      "labelEn": "Middle East & Africa",
+      "labelZh": "中东与非洲",
+      "summaryEn": "Citation geography within Middle East & Africa.",
+      "summaryZh": "中东与非洲区域内的引用地理分布。",
+      "citiesEn": "Saudi Arabia, Iran, Egypt, South Africa, United Arab Emirates, Israel",
+      "citiesZh": "沙特阿拉伯、伊朗、埃及、南非、阿联酋、以色列",
+      "color": "#6fe0c6"
+    },
+    {
+      "id": "latin-america",
+      "labelEn": "Latin America",
+      "labelZh": "拉丁美洲",
+      "summaryEn": "Citation geography within Latin America.",
+      "summaryZh": "拉丁美洲区域内的引用地理分布。",
+      "citiesEn": "Brazil, Chile",
+      "citiesZh": "巴西、智利",
+      "color": "#ffd36f"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cn",
+      "label": "CN",
+      "labelEn": "China",
+      "labelZh": "中国",
+      "region": "east-asia",
+      "x": 1137,
+      "y": 233,
+      "r": 22,
+      "citations": 1902,
+      "authorshipLinks": 16978,
+      "roleEn": "1902 unique citing works include author institutions in China.",
+      "roleZh": "1902 篇引用作品包含位于中国的作者机构。",
+      "institutions": [
+        {
+          "nameEn": "Chinese Academy of Sciences",
+          "nameZh": "Chinese Academy of Sciences",
+          "count": 496,
+          "country": "CN"
+        },
+        {
+          "nameEn": "Yangzhou University",
+          "nameZh": "Yangzhou University",
+          "count": 493,
+          "country": "CN"
+        },
+        {
+          "nameEn": "Nanjing Tech University",
+          "nameZh": "Nanjing Tech University",
+          "count": 319,
+          "country": "CN"
+        },
+        {
+          "nameEn": "Guangdong University of Technology",
+          "nameZh": "Guangdong University of Technology",
+          "count": 293,
+          "country": "CN"
+        },
+        {
+          "nameEn": "Beijing University of Chemical Technology",
+          "nameZh": "Beijing University of Chemical Technology",
+          "count": 291,
+          "country": "CN"
+        },
+        {
+          "nameEn": "Shanghai Jiao Tong University",
+          "nameZh": "Shanghai Jiao Tong University",
+          "count": 290,
+          "country": "CN"
+        }
+      ]
+    },
+    {
+      "id": "us",
+      "label": "US",
+      "labelEn": "United States",
+      "labelZh": "美国",
+      "region": "north-america",
+      "x": 326,
+      "y": 213,
+      "r": 22,
+      "citations": 170,
+      "authorshipLinks": 528,
+      "roleEn": "170 unique citing works include author institutions in United States.",
+      "roleZh": "170 篇引用作品包含位于美国的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "au",
+      "label": "AU",
+      "labelEn": "Australia",
+      "labelZh": "澳大利亚",
+      "region": "asia-pacific",
+      "x": 1256,
+      "y": 533,
+      "r": 21,
+      "citations": 155,
+      "authorshipLinks": 576,
+      "roleEn": "155 unique citing works include author institutions in Australia.",
+      "roleZh": "155 篇引用作品包含位于澳大利亚的作者机构。",
+      "institutions": [
+        {
+          "nameEn": "Curtin University",
+          "nameZh": "Curtin University",
+          "count": 126,
+          "country": "AU"
+        },
+        {
+          "nameEn": "The University of Adelaide",
+          "nameZh": "The University of Adelaide",
+          "count": 93,
+          "country": "AU"
+        }
+      ]
+    },
+    {
+      "id": "kr",
+      "label": "KR",
+      "labelEn": "South Korea",
+      "labelZh": "韩国",
+      "region": "east-asia",
+      "x": 1231,
+      "y": 230,
+      "r": 18,
+      "citations": 103,
+      "authorshipLinks": 478,
+      "roleEn": "103 unique citing works include author institutions in South Korea.",
+      "roleZh": "103 篇引用作品包含位于韩国的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "hk",
+      "label": "HK",
+      "labelEn": "Hong Kong SAR China",
+      "labelZh": "中国香港",
+      "region": "east-asia",
+      "x": 1176,
+      "y": 299,
+      "r": 18,
+      "citations": 94,
+      "authorshipLinks": 290,
+      "roleEn": "94 unique citing works include author institutions in Hong Kong SAR China.",
+      "roleZh": "94 篇引用作品包含位于中国香港的作者机构。",
+      "institutions": [
+        {
+          "nameEn": "Hong Kong Polytechnic University",
+          "nameZh": "Hong Kong Polytechnic University",
+          "count": 109,
+          "country": "HK"
+        },
+        {
+          "nameEn": "City University of Hong Kong",
+          "nameZh": "City University of Hong Kong",
+          "count": 100,
+          "country": "HK"
+        }
+      ]
+    },
+    {
+      "id": "in",
+      "label": "IN",
+      "labelEn": "India",
+      "labelZh": "印度",
+      "region": "asia-pacific",
+      "x": 1036,
+      "y": 298,
+      "r": 17,
+      "citations": 83,
+      "authorshipLinks": 380,
+      "roleEn": "83 unique citing works include author institutions in India.",
+      "roleZh": "83 篇引用作品包含位于印度的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "de",
+      "label": "DE",
+      "labelEn": "Germany",
+      "labelZh": "德国",
+      "region": "europe",
+      "x": 762,
+      "y": 157,
+      "r": 16,
+      "citations": 75,
+      "authorshipLinks": 162,
+      "roleEn": "75 unique citing works include author institutions in Germany.",
+      "roleZh": "75 篇引用作品包含位于德国的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "tw",
+      "label": "TW",
+      "labelEn": "Taiwan",
+      "labelZh": "中国台湾",
+      "region": "east-asia",
+      "x": 1204,
+      "y": 292,
+      "r": 15,
+      "citations": 63,
+      "authorshipLinks": 217,
+      "roleEn": "63 unique citing works include author institutions in Taiwan.",
+      "roleZh": "63 篇引用作品包含位于中国台湾的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "sg",
+      "label": "SG",
+      "labelEn": "Singapore",
+      "labelZh": "新加坡",
+      "region": "asia-pacific",
+      "x": 1135,
+      "y": 403,
+      "r": 14,
+      "citations": 54,
+      "authorshipLinks": 159,
+      "roleEn": "54 unique citing works include author institutions in Singapore.",
+      "roleZh": "54 篇引用作品包含位于新加坡的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "sa",
+      "label": "SA",
+      "labelEn": "Saudi Arabia",
+      "labelZh": "沙特阿拉伯",
+      "region": "middle-east-africa",
+      "x": 900,
+      "y": 291,
+      "r": 14,
+      "citations": 49,
+      "authorshipLinks": 94,
+      "roleEn": "49 unique citing works include author institutions in Saudi Arabia.",
+      "roleZh": "49 篇引用作品包含位于沙特阿拉伯的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "gb",
+      "label": "GB",
+      "labelEn": "United Kingdom",
+      "labelZh": "英国",
+      "region": "europe",
+      "x": 706,
+      "y": 136,
+      "r": 14,
+      "citations": 47,
+      "authorshipLinks": 89,
+      "roleEn": "47 unique citing works include author institutions in United Kingdom.",
+      "roleZh": "47 篇引用作品包含位于英国的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ca",
+      "label": "CA",
+      "labelEn": "Canada",
+      "labelZh": "加拿大",
+      "region": "north-america",
+      "x": 295,
+      "y": 133,
+      "r": 13,
+      "citations": 46,
+      "authorshipLinks": 116,
+      "roleEn": "46 unique citing works include author institutions in Canada.",
+      "roleZh": "46 篇引用作品包含位于加拿大的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "pl",
+      "label": "PL",
+      "labelEn": "Poland",
+      "labelZh": "波兰",
+      "region": "europe",
+      "x": 796,
+      "y": 153,
+      "r": 12,
+      "citations": 32,
+      "authorshipLinks": 95,
+      "roleEn": "32 unique citing works include author institutions in Poland.",
+      "roleZh": "32 篇引用作品包含位于波兰的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "fr",
+      "label": "FR",
+      "labelEn": "France",
+      "labelZh": "法国",
+      "region": "europe",
+      "x": 729,
+      "y": 181,
+      "r": 12,
+      "citations": 31,
+      "authorshipLinks": 135,
+      "roleEn": "31 unique citing works include author institutions in France.",
+      "roleZh": "31 篇引用作品包含位于法国的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ru",
+      "label": "RU",
+      "labelEn": "Russia",
+      "labelZh": "俄罗斯",
+      "region": "europe",
+      "x": 1080,
+      "y": 106,
+      "r": 12,
+      "citations": 31,
+      "authorshipLinks": 137,
+      "roleEn": "31 unique citing works include author institutions in Russia.",
+      "roleZh": "31 篇引用作品包含位于俄罗斯的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "jp",
+      "label": "JP",
+      "labelEn": "Japan",
+      "labelZh": "日本",
+      "region": "east-asia",
+      "x": 1273,
+      "y": 231,
+      "r": 11,
+      "citations": 28,
+      "authorshipLinks": 79,
+      "roleEn": "28 unique citing works include author institutions in Japan.",
+      "roleZh": "28 篇引用作品包含位于日本的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "es",
+      "label": "ES",
+      "labelEn": "Spain",
+      "labelZh": "西班牙",
+      "region": "europe",
+      "x": 705,
+      "y": 210,
+      "r": 11,
+      "citations": 24,
+      "authorshipLinks": 99,
+      "roleEn": "24 unique citing works include author institutions in Spain.",
+      "roleZh": "24 篇引用作品包含位于西班牙的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "pk",
+      "label": "PK",
+      "labelEn": "Pakistan",
+      "labelZh": "巴基斯坦",
+      "region": "asia-pacific",
+      "x": 996,
+      "y": 261,
+      "r": 11,
+      "citations": 23,
+      "authorshipLinks": 83,
+      "roleEn": "23 unique citing works include author institutions in Pakistan.",
+      "roleZh": "23 篇引用作品包含位于巴基斯坦的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ir",
+      "label": "IR",
+      "labelEn": "Iran",
+      "labelZh": "伊朗",
+      "region": "middle-east-africa",
+      "x": 932,
+      "y": 252,
+      "r": 10,
+      "citations": 20,
+      "authorshipLinks": 55,
+      "roleEn": "20 unique citing works include author institutions in Iran.",
+      "roleZh": "20 篇引用作品包含位于伊朗的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "be",
+      "label": "BE",
+      "labelEn": "Belgium",
+      "labelZh": "比利时",
+      "region": "europe",
+      "x": 738,
+      "y": 160,
+      "r": 10,
+      "citations": 19,
+      "authorshipLinks": 47,
+      "roleEn": "19 unique citing works include author institutions in Belgium.",
+      "roleZh": "19 篇引用作品包含位于比利时的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "pt",
+      "label": "PT",
+      "labelEn": "Portugal",
+      "labelZh": "葡萄牙",
+      "region": "europe",
+      "x": 688,
+      "y": 215,
+      "r": 9,
+      "citations": 15,
+      "authorshipLinks": 54,
+      "roleEn": "15 unique citing works include author institutions in Portugal.",
+      "roleZh": "15 篇引用作品包含位于葡萄牙的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "eg",
+      "label": "EG",
+      "labelEn": "Egypt",
+      "labelZh": "埃及",
+      "region": "middle-east-africa",
+      "x": 840,
+      "y": 281,
+      "r": 9,
+      "citations": 14,
+      "authorshipLinks": 31,
+      "roleEn": "14 unique citing works include author institutions in Egypt.",
+      "roleZh": "14 篇引用作品包含位于埃及的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "it",
+      "label": "IT",
+      "labelEn": "Italy",
+      "labelZh": "意大利",
+      "region": "europe",
+      "x": 770,
+      "y": 198,
+      "r": 9,
+      "citations": 13,
+      "authorshipLinks": 68,
+      "roleEn": "13 unique citing works include author institutions in Italy.",
+      "roleZh": "13 篇引用作品包含位于意大利的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ma",
+      "label": "MA",
+      "labelEn": "Morocco",
+      "labelZh": "MA",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 9,
+      "citations": 12,
+      "authorshipLinks": 49,
+      "roleEn": "12 unique citing works include author institutions in Morocco.",
+      "roleZh": "12 篇引用作品包含位于MA的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "my",
+      "label": "MY",
+      "labelEn": "Malaysia",
+      "labelZh": "马来西亚",
+      "region": "asia-pacific",
+      "x": 1128,
+      "y": 389,
+      "r": 9,
+      "citations": 12,
+      "authorshipLinks": 52,
+      "roleEn": "12 unique citing works include author institutions in Malaysia.",
+      "roleZh": "12 篇引用作品包含位于马来西亚的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "tr",
+      "label": "TR",
+      "labelEn": "Türkiye",
+      "labelZh": "土耳其",
+      "region": "all",
+      "x": 860,
+      "y": 217,
+      "r": 9,
+      "citations": 12,
+      "authorshipLinks": 40,
+      "roleEn": "12 unique citing works include author institutions in Türkiye.",
+      "roleZh": "12 篇引用作品包含位于土耳其的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "cz",
+      "label": "CZ",
+      "labelEn": "Czechia",
+      "labelZh": "捷克",
+      "region": "europe",
+      "x": 782,
+      "y": 164,
+      "r": 9,
+      "citations": 11,
+      "authorshipLinks": 18,
+      "roleEn": "11 unique citing works include author institutions in Czechia.",
+      "roleZh": "11 篇引用作品包含位于捷克的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "za",
+      "label": "ZA",
+      "labelEn": "South Africa",
+      "labelZh": "南非",
+      "region": "middle-east-africa",
+      "x": 819,
+      "y": 552,
+      "r": 8,
+      "citations": 10,
+      "authorshipLinks": 12,
+      "roleEn": "10 unique citing works include author institutions in South Africa.",
+      "roleZh": "10 篇引用作品包含位于南非的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "th",
+      "label": "TH",
+      "labelEn": "Thailand",
+      "labelZh": "泰国",
+      "region": "asia-pacific",
+      "x": 1124,
+      "y": 335,
+      "r": 8,
+      "citations": 9,
+      "authorshipLinks": 36,
+      "roleEn": "9 unique citing works include author institutions in Thailand.",
+      "roleZh": "9 篇引用作品包含位于泰国的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "gr",
+      "label": "GR",
+      "labelEn": "Greece",
+      "labelZh": "希腊",
+      "region": "europe",
+      "x": 808,
+      "y": 217,
+      "r": 8,
+      "citations": 9,
+      "authorshipLinks": 38,
+      "roleEn": "9 unique citing works include author institutions in Greece.",
+      "roleZh": "9 篇引用作品包含位于希腊的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "br",
+      "label": "BR",
+      "labelEn": "Brazil",
+      "labelZh": "巴西",
+      "region": "latin-america",
+      "x": 512,
+      "y": 479,
+      "r": 8,
+      "citations": 8,
+      "authorshipLinks": 37,
+      "roleEn": "8 unique citing works include author institutions in Brazil.",
+      "roleZh": "8 篇引用作品包含位于巴西的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "mo",
+      "label": "MO",
+      "labelEn": "Macao SAR China",
+      "labelZh": "MO",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 8,
+      "citations": 8,
+      "authorshipLinks": 37,
+      "roleEn": "8 unique citing works include author institutions in Macao SAR China.",
+      "roleZh": "8 篇引用作品包含位于MO的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "no",
+      "label": "NO",
+      "labelEn": "Norway",
+      "labelZh": "挪威",
+      "region": "europe",
+      "x": 752,
+      "y": 108,
+      "r": 8,
+      "citations": 8,
+      "authorshipLinks": 15,
+      "roleEn": "8 unique citing works include author institutions in Norway.",
+      "roleZh": "8 篇引用作品包含位于挪威的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "iq",
+      "label": "IQ",
+      "labelEn": "Iraq",
+      "labelZh": "IQ",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 16,
+      "roleEn": "7 unique citing works include author institutions in Iraq.",
+      "roleZh": "7 篇引用作品包含位于IQ的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "mx",
+      "label": "MX",
+      "labelEn": "Mexico",
+      "labelZh": "墨西哥",
+      "region": "north-america",
+      "x": 312,
+      "y": 296,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 28,
+      "roleEn": "7 unique citing works include author institutions in Mexico.",
+      "roleZh": "7 篇引用作品包含位于墨西哥的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "vn",
+      "label": "VN",
+      "labelEn": "Vietnam",
+      "labelZh": "越南",
+      "region": "asia-pacific",
+      "x": 1152,
+      "y": 340,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 19,
+      "roleEn": "7 unique citing works include author institutions in Vietnam.",
+      "roleZh": "7 篇引用作品包含位于越南的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "se",
+      "label": "SE",
+      "labelEn": "Sweden",
+      "labelZh": "瑞典",
+      "region": "europe",
+      "x": 780,
+      "y": 104,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 8,
+      "roleEn": "7 unique citing works include author institutions in Sweden.",
+      "roleZh": "7 篇引用作品包含位于瑞典的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ro",
+      "label": "RO",
+      "labelEn": "Romania",
+      "labelZh": "罗马尼亚",
+      "region": "europe",
+      "x": 820,
+      "y": 183,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 42,
+      "roleEn": "7 unique citing works include author institutions in Romania.",
+      "roleZh": "7 篇引用作品包含位于罗马尼亚的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "id",
+      "label": "ID",
+      "labelEn": "Indonesia",
+      "labelZh": "印度尼西亚",
+      "region": "asia-pacific",
+      "x": 1188,
+      "y": 422,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 40,
+      "roleEn": "7 unique citing works include author institutions in Indonesia.",
+      "roleZh": "7 篇引用作品包含位于印度尼西亚的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "at",
+      "label": "AT",
+      "labelEn": "Austria",
+      "labelZh": "奥地利",
+      "region": "europe",
+      "x": 778,
+      "y": 175,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 17,
+      "roleEn": "6 unique citing works include author institutions in Austria.",
+      "roleZh": "6 篇引用作品包含位于奥地利的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "nz",
+      "label": "NZ",
+      "labelEn": "New Zealand",
+      "labelZh": "新西兰",
+      "region": "asia-pacific",
+      "x": 1408,
+      "y": 612,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 28,
+      "roleEn": "6 unique citing works include author institutions in New Zealand.",
+      "roleZh": "6 篇引用作品包含位于新西兰的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "sk",
+      "label": "SK",
+      "labelEn": "Slovakia",
+      "labelZh": "SK",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 14,
+      "roleEn": "6 unique citing works include author institutions in Slovakia.",
+      "roleZh": "6 篇引用作品包含位于SK的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "dk",
+      "label": "DK",
+      "labelEn": "Denmark",
+      "labelZh": "丹麦",
+      "region": "europe",
+      "x": 760,
+      "y": 133,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 9,
+      "roleEn": "6 unique citing works include author institutions in Denmark.",
+      "roleZh": "6 篇引用作品包含位于丹麦的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ae",
+      "label": "AE",
+      "labelEn": "United Arab Emirates",
+      "labelZh": "阿联酋",
+      "region": "middle-east-africa",
+      "x": 937,
+      "y": 289,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 16,
+      "roleEn": "6 unique citing works include author institutions in United Arab Emirates.",
+      "roleZh": "6 篇引用作品包含位于阿联酋的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "kz",
+      "label": "KZ",
+      "labelEn": "Kazakhstan",
+      "labelZh": "KZ",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 23,
+      "roleEn": "6 unique citing works include author institutions in Kazakhstan.",
+      "roleZh": "6 篇引用作品包含位于KZ的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "bd",
+      "label": "BD",
+      "labelEn": "Bangladesh",
+      "labelZh": "BD",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 19,
+      "roleEn": "6 unique citing works include author institutions in Bangladesh.",
+      "roleZh": "6 篇引用作品包含位于BD的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ch",
+      "label": "CH",
+      "labelEn": "Switzerland",
+      "labelZh": "瑞士",
+      "region": "europe",
+      "x": 753,
+      "y": 179,
+      "r": 7,
+      "citations": 6,
+      "authorshipLinks": 29,
+      "roleEn": "6 unique citing works include author institutions in Switzerland.",
+      "roleZh": "6 篇引用作品包含位于瑞士的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "nl",
+      "label": "NL",
+      "labelEn": "Netherlands",
+      "labelZh": "荷兰",
+      "region": "europe",
+      "x": 741,
+      "y": 152,
+      "r": 7,
+      "citations": 5,
+      "authorshipLinks": 12,
+      "roleEn": "5 unique citing works include author institutions in Netherlands.",
+      "roleZh": "5 篇引用作品包含位于荷兰的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "jo",
+      "label": "JO",
+      "labelEn": "Jordan",
+      "labelZh": "JO",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 7,
+      "citations": 5,
+      "authorshipLinks": 14,
+      "roleEn": "5 unique citing works include author institutions in Jordan.",
+      "roleZh": "5 篇引用作品包含位于JO的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "si",
+      "label": "SI",
+      "labelEn": "Slovenia",
+      "labelZh": "斯洛文尼亚",
+      "region": "europe",
+      "x": 780,
+      "y": 182,
+      "r": 7,
+      "citations": 5,
+      "authorshipLinks": 8,
+      "roleEn": "5 unique citing works include author institutions in Slovenia.",
+      "roleZh": "5 篇引用作品包含位于斯洛文尼亚的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "by",
+      "label": "BY",
+      "labelEn": "Belarus",
+      "labelZh": "白俄罗斯",
+      "region": "europe",
+      "x": 832,
+      "y": 144,
+      "r": 7,
+      "citations": 5,
+      "authorshipLinks": 12,
+      "roleEn": "5 unique citing works include author institutions in Belarus.",
+      "roleZh": "5 篇引用作品包含位于白俄罗斯的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "il",
+      "label": "IL",
+      "labelEn": "Israel",
+      "labelZh": "以色列",
+      "region": "middle-east-africa",
+      "x": 860,
+      "y": 256,
+      "r": 7,
+      "citations": 5,
+      "authorshipLinks": 10,
+      "roleEn": "5 unique citing works include author institutions in Israel.",
+      "roleZh": "5 篇引用作品包含位于以色列的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "cl",
+      "label": "CL",
+      "labelEn": "Chile",
+      "labelZh": "智利",
+      "region": "latin-america",
+      "x": 436,
+      "y": 557,
+      "r": 7,
+      "citations": 4,
+      "authorshipLinks": 9,
+      "roleEn": "4 unique citing works include author institutions in Chile.",
+      "roleZh": "4 篇引用作品包含位于智利的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "fi",
+      "label": "FI",
+      "labelEn": "Finland",
+      "labelZh": "芬兰",
+      "region": "europe",
+      "x": 824,
+      "y": 94,
+      "r": 6,
+      "citations": 3,
+      "authorshipLinks": 9,
+      "roleEn": "3 unique citing works include author institutions in Finland.",
+      "roleZh": "3 篇引用作品包含位于芬兰的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "uz",
+      "label": "UZ",
+      "labelEn": "Uzbekistan",
+      "labelZh": "UZ",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 3,
+      "authorshipLinks": 3,
+      "roleEn": "3 unique citing works include author institutions in Uzbekistan.",
+      "roleZh": "3 篇引用作品包含位于UZ的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "dz",
+      "label": "DZ",
+      "labelEn": "Algeria",
+      "labelZh": "DZ",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 3,
+      "authorshipLinks": 10,
+      "roleEn": "3 unique citing works include author institutions in Algeria.",
+      "roleZh": "3 篇引用作品包含位于DZ的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "tn",
+      "label": "TN",
+      "labelEn": "Tunisia",
+      "labelZh": "TN",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 3,
+      "authorshipLinks": 7,
+      "roleEn": "3 unique citing works include author institutions in Tunisia.",
+      "roleZh": "3 篇引用作品包含位于TN的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ng",
+      "label": "NG",
+      "labelEn": "Nigeria",
+      "labelZh": "NG",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 3,
+      "authorshipLinks": 9,
+      "roleEn": "3 unique citing works include author institutions in Nigeria.",
+      "roleZh": "3 篇引用作品包含位于NG的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "hr",
+      "label": "HR",
+      "labelEn": "Croatia",
+      "labelZh": "HR",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 3,
+      "roleEn": "2 unique citing works include author institutions in Croatia.",
+      "roleZh": "2 篇引用作品包含位于HR的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "et",
+      "label": "ET",
+      "labelEn": "Ethiopia",
+      "labelZh": "ET",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 6,
+      "roleEn": "2 unique citing works include author institutions in Ethiopia.",
+      "roleZh": "2 篇引用作品包含位于ET的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "rs",
+      "label": "RS",
+      "labelEn": "Serbia",
+      "labelZh": "RS",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 5,
+      "roleEn": "2 unique citing works include author institutions in Serbia.",
+      "roleZh": "2 篇引用作品包含位于RS的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "co",
+      "label": "CO",
+      "labelEn": "Colombia",
+      "labelZh": "CO",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 3,
+      "roleEn": "2 unique citing works include author institutions in Colombia.",
+      "roleZh": "2 篇引用作品包含位于CO的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "lk",
+      "label": "LK",
+      "labelEn": "Sri Lanka",
+      "labelZh": "LK",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 4,
+      "roleEn": "2 unique citing works include author institutions in Sri Lanka.",
+      "roleZh": "2 篇引用作品包含位于LK的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "bn",
+      "label": "BN",
+      "labelEn": "Brunei",
+      "labelZh": "BN",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 4,
+      "roleEn": "2 unique citing works include author institutions in Brunei.",
+      "roleZh": "2 篇引用作品包含位于BN的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ie",
+      "label": "IE",
+      "labelEn": "Ireland",
+      "labelZh": "爱尔兰",
+      "region": "europe",
+      "x": 688,
+      "y": 148,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 3,
+      "roleEn": "2 unique citing works include author institutions in Ireland.",
+      "roleZh": "2 篇引用作品包含位于爱尔兰的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "hu",
+      "label": "HU",
+      "labelEn": "Hungary",
+      "labelZh": "匈牙利",
+      "region": "europe",
+      "x": 796,
+      "y": 178,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 3,
+      "roleEn": "2 unique citing works include author institutions in Hungary.",
+      "roleZh": "2 篇引用作品包含位于匈牙利的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "np",
+      "label": "NP",
+      "labelEn": "Nepal",
+      "labelZh": "NP",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 3,
+      "roleEn": "2 unique citing works include author institutions in Nepal.",
+      "roleZh": "2 篇引用作品包含位于NP的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "mn",
+      "label": "MN",
+      "labelEn": "Mongolia",
+      "labelZh": "MN",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 4,
+      "roleEn": "2 unique citing works include author institutions in Mongolia.",
+      "roleZh": "2 篇引用作品包含位于MN的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "lt",
+      "label": "LT",
+      "labelEn": "Lithuania",
+      "labelZh": "LT",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 6,
+      "citations": 2,
+      "authorshipLinks": 9,
+      "roleEn": "2 unique citing works include author institutions in Lithuania.",
+      "roleZh": "2 篇引用作品包含位于LT的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "mv",
+      "label": "MV",
+      "labelEn": "Maldives",
+      "labelZh": "MV",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 4,
+      "roleEn": "1 unique citing works include author institutions in Maldives.",
+      "roleZh": "1 篇引用作品包含位于MV的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ye",
+      "label": "YE",
+      "labelEn": "Yemen",
+      "labelZh": "YE",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Yemen.",
+      "roleZh": "1 篇引用作品包含位于YE的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "lb",
+      "label": "LB",
+      "labelEn": "Lebanon",
+      "labelZh": "LB",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Lebanon.",
+      "roleZh": "1 篇引用作品包含位于LB的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "gh",
+      "label": "GH",
+      "labelEn": "Ghana",
+      "labelZh": "GH",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Ghana.",
+      "roleZh": "1 篇引用作品包含位于GH的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "er",
+      "label": "ER",
+      "labelEn": "Eritrea",
+      "labelZh": "ER",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Eritrea.",
+      "roleZh": "1 篇引用作品包含位于ER的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "dj",
+      "label": "DJ",
+      "labelEn": "Djibouti",
+      "labelZh": "DJ",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 4,
+      "roleEn": "1 unique citing works include author institutions in Djibouti.",
+      "roleZh": "1 篇引用作品包含位于DJ的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "lv",
+      "label": "LV",
+      "labelEn": "Latvia",
+      "labelZh": "LV",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 2,
+      "roleEn": "1 unique citing works include author institutions in Latvia.",
+      "roleZh": "1 篇引用作品包含位于LV的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "om",
+      "label": "OM",
+      "labelEn": "Oman",
+      "labelZh": "OM",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Oman.",
+      "roleZh": "1 篇引用作品包含位于OM的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "qa",
+      "label": "QA",
+      "labelEn": "Qatar",
+      "labelZh": "卡塔尔",
+      "region": "middle-east-africa",
+      "x": 925,
+      "y": 285,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 2,
+      "roleEn": "1 unique citing works include author institutions in Qatar.",
+      "roleZh": "1 篇引用作品包含位于卡塔尔的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ph",
+      "label": "PH",
+      "labelEn": "Philippines",
+      "labelZh": "PH",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Philippines.",
+      "roleZh": "1 篇引用作品包含位于PH的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "sd",
+      "label": "SD",
+      "labelEn": "Sudan",
+      "labelZh": "SD",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 10,
+      "roleEn": "1 unique citing works include author institutions in Sudan.",
+      "roleZh": "1 篇引用作品包含位于SD的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "me",
+      "label": "ME",
+      "labelEn": "Montenegro",
+      "labelZh": "ME",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Montenegro.",
+      "roleZh": "1 篇引用作品包含位于ME的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "cy",
+      "label": "CY",
+      "labelEn": "Cyprus",
+      "labelZh": "CY",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 5,
+      "roleEn": "1 unique citing works include author institutions in Cyprus.",
+      "roleZh": "1 篇引用作品包含位于CY的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ec",
+      "label": "EC",
+      "labelEn": "Ecuador",
+      "labelZh": "EC",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 5,
+      "roleEn": "1 unique citing works include author institutions in Ecuador.",
+      "roleZh": "1 篇引用作品包含位于EC的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "cr",
+      "label": "CR",
+      "labelEn": "Costa Rica",
+      "labelZh": "CR",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 10,
+      "roleEn": "1 unique citing works include author institutions in Costa Rica.",
+      "roleZh": "1 篇引用作品包含位于CR的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "rw",
+      "label": "RW",
+      "labelEn": "Rwanda",
+      "labelZh": "RW",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 6,
+      "roleEn": "1 unique citing works include author institutions in Rwanda.",
+      "roleZh": "1 篇引用作品包含位于RW的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "vg",
+      "label": "VG",
+      "labelEn": "British Virgin Islands",
+      "labelZh": "VG",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in British Virgin Islands.",
+      "roleZh": "1 篇引用作品包含位于VG的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "bg",
+      "label": "BG",
+      "labelEn": "Bulgaria",
+      "labelZh": "BG",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 2,
+      "roleEn": "1 unique citing works include author institutions in Bulgaria.",
+      "roleZh": "1 篇引用作品包含位于BG的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ss",
+      "label": "SS",
+      "labelEn": "South Sudan",
+      "labelZh": "SS",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in South Sudan.",
+      "roleZh": "1 篇引用作品包含位于SS的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "bo",
+      "label": "BO",
+      "labelEn": "Bolivia",
+      "labelZh": "BO",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Bolivia.",
+      "roleZh": "1 篇引用作品包含位于BO的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "uy",
+      "label": "UY",
+      "labelEn": "Uruguay",
+      "labelZh": "UY",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 2,
+      "roleEn": "1 unique citing works include author institutions in Uruguay.",
+      "roleZh": "1 篇引用作品包含位于UY的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ar",
+      "label": "AR",
+      "labelEn": "Argentina",
+      "labelZh": "AR",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 4,
+      "roleEn": "1 unique citing works include author institutions in Argentina.",
+      "roleZh": "1 篇引用作品包含位于AR的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "lu",
+      "label": "LU",
+      "labelEn": "Luxembourg",
+      "labelZh": "LU",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 1,
+      "roleEn": "1 unique citing works include author institutions in Luxembourg.",
+      "roleZh": "1 篇引用作品包含位于LU的作者机构。",
+      "institutions": []
+    },
+    {
+      "id": "ug",
+      "label": "UG",
+      "labelEn": "Uganda",
+      "labelZh": "UG",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 11,
+      "roleEn": "1 unique citing works include author institutions in Uganda.",
+      "roleZh": "1 篇引用作品包含位于UG的作者机构。",
+      "institutions": []
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "cn",
+        "label": "CN",
+        "labelEn": "China",
+        "labelZh": "中国",
+        "region": "east-asia",
+        "x": 1137,
+        "y": 233,
+        "r": 22,
+        "citations": 1902,
+        "authorshipLinks": 16978,
+        "roleEn": "1902 unique citing works include author institutions in China.",
+        "roleZh": "1902 篇引用作品包含位于中国的作者机构。",
+        "institutions": [
+          {
+            "nameEn": "Chinese Academy of Sciences",
+            "nameZh": "Chinese Academy of Sciences",
+            "count": 496,
+            "country": "CN"
+          },
+          {
+            "nameEn": "Yangzhou University",
+            "nameZh": "Yangzhou University",
+            "count": 493,
+            "country": "CN"
+          },
+          {
+            "nameEn": "Nanjing Tech University",
+            "nameZh": "Nanjing Tech University",
+            "count": 319,
+            "country": "CN"
+          },
+          {
+            "nameEn": "Guangdong University of Technology",
+            "nameZh": "Guangdong University of Technology",
+            "count": 293,
+            "country": "CN"
+          },
+          {
+            "nameEn": "Beijing University of Chemical Technology",
+            "nameZh": "Beijing University of Chemical Technology",
+            "count": 291,
+            "country": "CN"
+          }
+        ]
+      },
+      {
+        "id": "us",
+        "label": "US",
+        "labelEn": "United States",
+        "labelZh": "美国",
+        "region": "north-america",
+        "x": 326,
+        "y": 213,
+        "r": 22,
+        "citations": 170,
+        "authorshipLinks": 528,
+        "roleEn": "170 unique citing works include author institutions in United States.",
+        "roleZh": "170 篇引用作品包含位于美国的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "au",
+        "label": "AU",
+        "labelEn": "Australia",
+        "labelZh": "澳大利亚",
+        "region": "asia-pacific",
+        "x": 1256,
+        "y": 533,
+        "r": 21,
+        "citations": 155,
+        "authorshipLinks": 576,
+        "roleEn": "155 unique citing works include author institutions in Australia.",
+        "roleZh": "155 篇引用作品包含位于澳大利亚的作者机构。",
+        "institutions": [
+          {
+            "nameEn": "Curtin University",
+            "nameZh": "Curtin University",
+            "count": 126,
+            "country": "AU"
+          },
+          {
+            "nameEn": "The University of Adelaide",
+            "nameZh": "The University of Adelaide",
+            "count": 93,
+            "country": "AU"
+          }
+        ]
+      },
+      {
+        "id": "kr",
+        "label": "KR",
+        "labelEn": "South Korea",
+        "labelZh": "韩国",
+        "region": "east-asia",
+        "x": 1231,
+        "y": 230,
+        "r": 18,
+        "citations": 103,
+        "authorshipLinks": 478,
+        "roleEn": "103 unique citing works include author institutions in South Korea.",
+        "roleZh": "103 篇引用作品包含位于韩国的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "hk",
+        "label": "HK",
+        "labelEn": "Hong Kong SAR China",
+        "labelZh": "中国香港",
+        "region": "east-asia",
+        "x": 1176,
+        "y": 299,
+        "r": 18,
+        "citations": 94,
+        "authorshipLinks": 290,
+        "roleEn": "94 unique citing works include author institutions in Hong Kong SAR China.",
+        "roleZh": "94 篇引用作品包含位于中国香港的作者机构。",
+        "institutions": [
+          {
+            "nameEn": "Hong Kong Polytechnic University",
+            "nameZh": "Hong Kong Polytechnic University",
+            "count": 109,
+            "country": "HK"
+          },
+          {
+            "nameEn": "City University of Hong Kong",
+            "nameZh": "City University of Hong Kong",
+            "count": 100,
+            "country": "HK"
+          }
+        ]
+      },
+      {
+        "id": "in",
+        "label": "IN",
+        "labelEn": "India",
+        "labelZh": "印度",
+        "region": "asia-pacific",
+        "x": 1036,
+        "y": 298,
+        "r": 17,
+        "citations": 83,
+        "authorshipLinks": 380,
+        "roleEn": "83 unique citing works include author institutions in India.",
+        "roleZh": "83 篇引用作品包含位于印度的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "de",
+        "label": "DE",
+        "labelEn": "Germany",
+        "labelZh": "德国",
+        "region": "europe",
+        "x": 762,
+        "y": 157,
+        "r": 16,
+        "citations": 75,
+        "authorshipLinks": 162,
+        "roleEn": "75 unique citing works include author institutions in Germany.",
+        "roleZh": "75 篇引用作品包含位于德国的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "tw",
+        "label": "TW",
+        "labelEn": "Taiwan",
+        "labelZh": "中国台湾",
+        "region": "east-asia",
+        "x": 1204,
+        "y": 292,
+        "r": 15,
+        "citations": 63,
+        "authorshipLinks": 217,
+        "roleEn": "63 unique citing works include author institutions in Taiwan.",
+        "roleZh": "63 篇引用作品包含位于中国台湾的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "sg",
+        "label": "SG",
+        "labelEn": "Singapore",
+        "labelZh": "新加坡",
+        "region": "asia-pacific",
+        "x": 1135,
+        "y": 403,
+        "r": 14,
+        "citations": 54,
+        "authorshipLinks": 159,
+        "roleEn": "54 unique citing works include author institutions in Singapore.",
+        "roleZh": "54 篇引用作品包含位于新加坡的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "sa",
+        "label": "SA",
+        "labelEn": "Saudi Arabia",
+        "labelZh": "沙特阿拉伯",
+        "region": "middle-east-africa",
+        "x": 900,
+        "y": 291,
+        "r": 14,
+        "citations": 49,
+        "authorshipLinks": 94,
+        "roleEn": "49 unique citing works include author institutions in Saudi Arabia.",
+        "roleZh": "49 篇引用作品包含位于沙特阿拉伯的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "gb",
+        "label": "GB",
+        "labelEn": "United Kingdom",
+        "labelZh": "英国",
+        "region": "europe",
+        "x": 706,
+        "y": 136,
+        "r": 14,
+        "citations": 47,
+        "authorshipLinks": 89,
+        "roleEn": "47 unique citing works include author institutions in United Kingdom.",
+        "roleZh": "47 篇引用作品包含位于英国的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "ca",
+        "label": "CA",
+        "labelEn": "Canada",
+        "labelZh": "加拿大",
+        "region": "north-america",
+        "x": 295,
+        "y": 133,
+        "r": 13,
+        "citations": 46,
+        "authorshipLinks": 116,
+        "roleEn": "46 unique citing works include author institutions in Canada.",
+        "roleZh": "46 篇引用作品包含位于加拿大的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "pl",
+        "label": "PL",
+        "labelEn": "Poland",
+        "labelZh": "波兰",
+        "region": "europe",
+        "x": 796,
+        "y": 153,
+        "r": 12,
+        "citations": 32,
+        "authorshipLinks": 95,
+        "roleEn": "32 unique citing works include author institutions in Poland.",
+        "roleZh": "32 篇引用作品包含位于波兰的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "fr",
+        "label": "FR",
+        "labelEn": "France",
+        "labelZh": "法国",
+        "region": "europe",
+        "x": 729,
+        "y": 181,
+        "r": 12,
+        "citations": 31,
+        "authorshipLinks": 135,
+        "roleEn": "31 unique citing works include author institutions in France.",
+        "roleZh": "31 篇引用作品包含位于法国的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "ru",
+        "label": "RU",
+        "labelEn": "Russia",
+        "labelZh": "俄罗斯",
+        "region": "europe",
+        "x": 1080,
+        "y": 106,
+        "r": 12,
+        "citations": 31,
+        "authorshipLinks": 137,
+        "roleEn": "31 unique citing works include author institutions in Russia.",
+        "roleZh": "31 篇引用作品包含位于俄罗斯的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "jp",
+        "label": "JP",
+        "labelEn": "Japan",
+        "labelZh": "日本",
+        "region": "east-asia",
+        "x": 1273,
+        "y": 231,
+        "r": 11,
+        "citations": 28,
+        "authorshipLinks": 79,
+        "roleEn": "28 unique citing works include author institutions in Japan.",
+        "roleZh": "28 篇引用作品包含位于日本的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "es",
+        "label": "ES",
+        "labelEn": "Spain",
+        "labelZh": "西班牙",
+        "region": "europe",
+        "x": 705,
+        "y": 210,
+        "r": 11,
+        "citations": 24,
+        "authorshipLinks": 99,
+        "roleEn": "24 unique citing works include author institutions in Spain.",
+        "roleZh": "24 篇引用作品包含位于西班牙的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "pk",
+        "label": "PK",
+        "labelEn": "Pakistan",
+        "labelZh": "巴基斯坦",
+        "region": "asia-pacific",
+        "x": 996,
+        "y": 261,
+        "r": 11,
+        "citations": 23,
+        "authorshipLinks": 83,
+        "roleEn": "23 unique citing works include author institutions in Pakistan.",
+        "roleZh": "23 篇引用作品包含位于巴基斯坦的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "ir",
+        "label": "IR",
+        "labelEn": "Iran",
+        "labelZh": "伊朗",
+        "region": "middle-east-africa",
+        "x": 932,
+        "y": 252,
+        "r": 10,
+        "citations": 20,
+        "authorshipLinks": 55,
+        "roleEn": "20 unique citing works include author institutions in Iran.",
+        "roleZh": "20 篇引用作品包含位于伊朗的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "be",
+        "label": "BE",
+        "labelEn": "Belgium",
+        "labelZh": "比利时",
+        "region": "europe",
+        "x": 738,
+        "y": 160,
+        "r": 10,
+        "citations": 19,
+        "authorshipLinks": 47,
+        "roleEn": "19 unique citing works include author institutions in Belgium.",
+        "roleZh": "19 篇引用作品包含位于比利时的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "pt",
+        "label": "PT",
+        "labelEn": "Portugal",
+        "labelZh": "葡萄牙",
+        "region": "europe",
+        "x": 688,
+        "y": 215,
+        "r": 9,
+        "citations": 15,
+        "authorshipLinks": 54,
+        "roleEn": "15 unique citing works include author institutions in Portugal.",
+        "roleZh": "15 篇引用作品包含位于葡萄牙的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "eg",
+        "label": "EG",
+        "labelEn": "Egypt",
+        "labelZh": "埃及",
+        "region": "middle-east-africa",
+        "x": 840,
+        "y": 281,
+        "r": 9,
+        "citations": 14,
+        "authorshipLinks": 31,
+        "roleEn": "14 unique citing works include author institutions in Egypt.",
+        "roleZh": "14 篇引用作品包含位于埃及的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "it",
+        "label": "IT",
+        "labelEn": "Italy",
+        "labelZh": "意大利",
+        "region": "europe",
+        "x": 770,
+        "y": 198,
+        "r": 9,
+        "citations": 13,
+        "authorshipLinks": 68,
+        "roleEn": "13 unique citing works include author institutions in Italy.",
+        "roleZh": "13 篇引用作品包含位于意大利的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "ma",
+        "label": "MA",
+        "labelEn": "Morocco",
+        "labelZh": "MA",
+        "region": "all",
+        "x": 720,
+        "y": 311,
+        "r": 9,
+        "citations": 12,
+        "authorshipLinks": 49,
+        "roleEn": "12 unique citing works include author institutions in Morocco.",
+        "roleZh": "12 篇引用作品包含位于MA的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "my",
+        "label": "MY",
+        "labelEn": "Malaysia",
+        "labelZh": "马来西亚",
+        "region": "asia-pacific",
+        "x": 1128,
+        "y": 389,
+        "r": 9,
+        "citations": 12,
+        "authorshipLinks": 52,
+        "roleEn": "12 unique citing works include author institutions in Malaysia.",
+        "roleZh": "12 篇引用作品包含位于马来西亚的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "tr",
+        "label": "TR",
+        "labelEn": "Türkiye",
+        "labelZh": "土耳其",
+        "region": "all",
+        "x": 860,
+        "y": 217,
+        "r": 9,
+        "citations": 12,
+        "authorshipLinks": 40,
+        "roleEn": "12 unique citing works include author institutions in Türkiye.",
+        "roleZh": "12 篇引用作品包含位于土耳其的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "cz",
+        "label": "CZ",
+        "labelEn": "Czechia",
+        "labelZh": "捷克",
+        "region": "europe",
+        "x": 782,
+        "y": 164,
+        "r": 9,
+        "citations": 11,
+        "authorshipLinks": 18,
+        "roleEn": "11 unique citing works include author institutions in Czechia.",
+        "roleZh": "11 篇引用作品包含位于捷克的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "za",
+        "label": "ZA",
+        "labelEn": "South Africa",
+        "labelZh": "南非",
+        "region": "middle-east-africa",
+        "x": 819,
+        "y": 552,
+        "r": 8,
+        "citations": 10,
+        "authorshipLinks": 12,
+        "roleEn": "10 unique citing works include author institutions in South Africa.",
+        "roleZh": "10 篇引用作品包含位于南非的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "th",
+        "label": "TH",
+        "labelEn": "Thailand",
+        "labelZh": "泰国",
+        "region": "asia-pacific",
+        "x": 1124,
+        "y": 335,
+        "r": 8,
+        "citations": 9,
+        "authorshipLinks": 36,
+        "roleEn": "9 unique citing works include author institutions in Thailand.",
+        "roleZh": "9 篇引用作品包含位于泰国的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "gr",
+        "label": "GR",
+        "labelEn": "Greece",
+        "labelZh": "希腊",
+        "region": "europe",
+        "x": 808,
+        "y": 217,
+        "r": 8,
+        "citations": 9,
+        "authorshipLinks": 38,
+        "roleEn": "9 unique citing works include author institutions in Greece.",
+        "roleZh": "9 篇引用作品包含位于希腊的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "br",
+        "label": "BR",
+        "labelEn": "Brazil",
+        "labelZh": "巴西",
+        "region": "latin-america",
+        "x": 512,
+        "y": 479,
+        "r": 8,
+        "citations": 8,
+        "authorshipLinks": 37,
+        "roleEn": "8 unique citing works include author institutions in Brazil.",
+        "roleZh": "8 篇引用作品包含位于巴西的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "mo",
+        "label": "MO",
+        "labelEn": "Macao SAR China",
+        "labelZh": "MO",
+        "region": "all",
+        "x": 720,
+        "y": 311,
+        "r": 8,
+        "citations": 8,
+        "authorshipLinks": 37,
+        "roleEn": "8 unique citing works include author institutions in Macao SAR China.",
+        "roleZh": "8 篇引用作品包含位于MO的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "no",
+        "label": "NO",
+        "labelEn": "Norway",
+        "labelZh": "挪威",
+        "region": "europe",
+        "x": 752,
+        "y": 108,
+        "r": 8,
+        "citations": 8,
+        "authorshipLinks": 15,
+        "roleEn": "8 unique citing works include author institutions in Norway.",
+        "roleZh": "8 篇引用作品包含位于挪威的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "iq",
+        "label": "IQ",
+        "labelEn": "Iraq",
+        "labelZh": "IQ",
+        "region": "all",
+        "x": 720,
+        "y": 311,
+        "r": 8,
+        "citations": 7,
+        "authorshipLinks": 16,
+        "roleEn": "7 unique citing works include author institutions in Iraq.",
+        "roleZh": "7 篇引用作品包含位于IQ的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "mx",
+        "label": "MX",
+        "labelEn": "Mexico",
+        "labelZh": "墨西哥",
+        "region": "north-america",
+        "x": 312,
+        "y": 296,
+        "r": 8,
+        "citations": 7,
+        "authorshipLinks": 28,
+        "roleEn": "7 unique citing works include author institutions in Mexico.",
+        "roleZh": "7 篇引用作品包含位于墨西哥的作者机构。",
+        "institutions": []
+      },
+      {
+        "id": "vn",
+        "label": "VN",
+        "labelEn": "Vietnam",
+        "labelZh": "越南",
+        "region": "asia-pacific",
+        "x": 1152,
+        "y": 340,
+        "r": 8,
+        "citations": 7,
+        "authorshipLinks": 19,
+        "roleEn": "7 unique citing works include author institutions in Vietnam.",
+        "roleZh": "7 篇引用作品包含位于越南的作者机构。",
+        "institutions": []
+      }
+    ],
+    "edges": [
+      {
+        "source": "au",
+        "target": "cn",
+        "weight": 123
+      },
+      {
+        "source": "cn",
+        "target": "us",
+        "weight": 119
+      },
+      {
+        "source": "cn",
+        "target": "hk",
+        "weight": 81
+      },
+      {
+        "source": "cn",
+        "target": "de",
+        "weight": 50
+      },
+      {
+        "source": "cn",
+        "target": "sg",
+        "weight": 50
+      },
+      {
+        "source": "cn",
+        "target": "tw",
+        "weight": 41
+      },
+      {
+        "source": "cn",
+        "target": "gb",
+        "weight": 36
+      },
+      {
+        "source": "cn",
+        "target": "kr",
+        "weight": 36
+      },
+      {
+        "source": "ca",
+        "target": "cn",
+        "weight": 34
+      },
+      {
+        "source": "cn",
+        "target": "sa",
+        "weight": 28
+      },
+      {
+        "source": "au",
+        "target": "hk",
+        "weight": 24
+      },
+      {
+        "source": "cn",
+        "target": "pl",
+        "weight": 24
+      },
+      {
+        "source": "cn",
+        "target": "jp",
+        "weight": 19
+      },
+      {
+        "source": "de",
+        "target": "tw",
+        "weight": 18
+      },
+      {
+        "source": "au",
+        "target": "us",
+        "weight": 17
+      },
+      {
+        "source": "de",
+        "target": "us",
+        "weight": 15
+      },
+      {
+        "source": "cn",
+        "target": "fr",
+        "weight": 15
+      },
+      {
+        "source": "au",
+        "target": "de",
+        "weight": 14
+      },
+      {
+        "source": "be",
+        "target": "cn",
+        "weight": 14
+      },
+      {
+        "source": "cn",
+        "target": "ru",
+        "weight": 14
+      },
+      {
+        "source": "au",
+        "target": "tw",
+        "weight": 13
+      },
+      {
+        "source": "cn",
+        "target": "pt",
+        "weight": 13
+      },
+      {
+        "source": "in",
+        "target": "kr",
+        "weight": 13
+      },
+      {
+        "source": "hk",
+        "target": "us",
+        "weight": 12
+      },
+      {
+        "source": "cn",
+        "target": "pk",
+        "weight": 12
+      },
+      {
+        "source": "pk",
+        "target": "sa",
+        "weight": 10
+      },
+      {
+        "source": "cn",
+        "target": "eg",
+        "weight": 10
+      },
+      {
+        "source": "de",
+        "target": "hk",
+        "weight": 9
+      },
+      {
+        "source": "hk",
+        "target": "tw",
+        "weight": 9
+      },
+      {
+        "source": "cn",
+        "target": "za",
+        "weight": 9
+      },
+      {
+        "source": "cn",
+        "target": "es",
+        "weight": 9
+      },
+      {
+        "source": "au",
+        "target": "kr",
+        "weight": 9
+      },
+      {
+        "source": "gb",
+        "target": "us",
+        "weight": 9
+      },
+      {
+        "source": "cn",
+        "target": "in",
+        "weight": 8
+      },
+      {
+        "source": "cn",
+        "target": "cz",
+        "weight": 8
+      },
+      {
+        "source": "kr",
+        "target": "us",
+        "weight": 8
+      },
+      {
+        "source": "de",
+        "target": "gb",
+        "weight": 7
+      },
+      {
+        "source": "cn",
+        "target": "mo",
+        "weight": 7
+      },
+      {
+        "source": "cn",
+        "target": "ir",
+        "weight": 7
+      },
+      {
+        "source": "in",
+        "target": "sa",
+        "weight": 7
+      },
+      {
+        "source": "sa",
+        "target": "us",
+        "weight": 7
+      },
+      {
+        "source": "hk",
+        "target": "kr",
+        "weight": 7
+      },
+      {
+        "source": "cn",
+        "target": "no",
+        "weight": 7
+      },
+      {
+        "source": "in",
+        "target": "tw",
+        "weight": 6
+      },
+      {
+        "source": "cn",
+        "target": "th",
+        "weight": 6
+      },
+      {
+        "source": "cn",
+        "target": "my",
+        "weight": 6
+      },
+      {
+        "source": "be",
+        "target": "us",
+        "weight": 6
+      },
+      {
+        "source": "de",
+        "target": "kr",
+        "weight": 6
+      },
+      {
+        "source": "sg",
+        "target": "us",
+        "weight": 6
+      },
+      {
+        "source": "in",
+        "target": "us",
+        "weight": 5
+      },
+      {
+        "source": "tw",
+        "target": "us",
+        "weight": 5
+      },
+      {
+        "source": "be",
+        "target": "gb",
+        "weight": 5
+      },
+      {
+        "source": "eg",
+        "target": "sa",
+        "weight": 5
+      },
+      {
+        "source": "de",
+        "target": "in",
+        "weight": 5
+      },
+      {
+        "source": "kr",
+        "target": "sa",
+        "weight": 5
+      },
+      {
+        "source": "cn",
+        "target": "it",
+        "weight": 5
+      },
+      {
+        "source": "gb",
+        "target": "hk",
+        "weight": 5
+      },
+      {
+        "source": "ca",
+        "target": "tw",
+        "weight": 4
+      },
+      {
+        "source": "kr",
+        "target": "tw",
+        "weight": 4
+      },
+      {
+        "source": "de",
+        "target": "fr",
+        "weight": 4
+      },
+      {
+        "source": "fr",
+        "target": "sg",
+        "weight": 4
+      },
+      {
+        "source": "au",
+        "target": "sg",
+        "weight": 4
+      },
+      {
+        "source": "cz",
+        "target": "de",
+        "weight": 4
+      },
+      {
+        "source": "ca",
+        "target": "us",
+        "weight": 4
+      },
+      {
+        "source": "kr",
+        "target": "pl",
+        "weight": 4
+      },
+      {
+        "source": "cn",
+        "target": "tr",
+        "weight": 4
+      },
+      {
+        "source": "au",
+        "target": "in",
+        "weight": 3
+      },
+      {
+        "source": "cn",
+        "target": "iq",
+        "weight": 3
+      },
+      {
+        "source": "gb",
+        "target": "kr",
+        "weight": 3
+      },
+      {
+        "source": "es",
+        "target": "us",
+        "weight": 3
+      },
+      {
+        "source": "be",
+        "target": "de",
+        "weight": 3
+      },
+      {
+        "source": "au",
+        "target": "jp",
+        "weight": 3
+      },
+      {
+        "source": "fr",
+        "target": "us",
+        "weight": 3
+      },
+      {
+        "source": "iq",
+        "target": "sa",
+        "weight": 3
+      },
+      {
+        "source": "gb",
+        "target": "in",
+        "weight": 3
+      },
+      {
+        "source": "pk",
+        "target": "us",
+        "weight": 3
+      },
+      {
+        "source": "kr",
+        "target": "pk",
+        "weight": 3
+      },
+      {
+        "source": "au",
+        "target": "gb",
+        "weight": 3
+      },
+      {
+        "source": "cz",
+        "target": "pl",
+        "weight": 3
+      },
+      {
+        "source": "gb",
+        "target": "sa",
+        "weight": 3
+      },
+      {
+        "source": "hk",
+        "target": "sa",
+        "weight": 3
+      },
+      {
+        "source": "ru",
+        "target": "us",
+        "weight": 3
+      },
+      {
+        "source": "tr",
+        "target": "za",
+        "weight": 3
+      },
+      {
+        "source": "pl",
+        "target": "us",
+        "weight": 3
+      },
+      {
+        "source": "au",
+        "target": "ru",
+        "weight": 3
+      },
+      {
+        "source": "be",
+        "target": "hk",
+        "weight": 3
+      },
+      {
+        "source": "au",
+        "target": "ca",
+        "weight": 2
+      },
+      {
+        "source": "fr",
+        "target": "gb",
+        "weight": 2
+      },
+      {
+        "source": "br",
+        "target": "cn",
+        "weight": 2
+      },
+      {
+        "source": "ca",
+        "target": "de",
+        "weight": 2
+      }
+    ]
+  },
+  "topInstitutions": [
+    {
+      "id": "https://openalex.org/I19820366",
+      "name": "Chinese Academy of Sciences",
+      "country": "CN",
+      "count": 496
+    },
+    {
+      "id": "https://openalex.org/I78978612",
+      "name": "Yangzhou University",
+      "country": "CN",
+      "count": 493
+    },
+    {
+      "id": "https://openalex.org/I134687103",
+      "name": "Nanjing Tech University",
+      "country": "CN",
+      "count": 319
+    },
+    {
+      "id": "https://openalex.org/I139024713",
+      "name": "Guangdong University of Technology",
+      "country": "CN",
+      "count": 293
+    },
+    {
+      "id": "https://openalex.org/I75390827",
+      "name": "Beijing University of Chemical Technology",
+      "country": "CN",
+      "count": 291
+    },
+    {
+      "id": "https://openalex.org/I183067930",
+      "name": "Shanghai Jiao Tong University",
+      "country": "CN",
+      "count": 290
+    },
+    {
+      "id": "https://openalex.org/I4210165038",
+      "name": "University of Chinese Academy of Sciences",
+      "country": "CN",
+      "count": 216
+    },
+    {
+      "id": "https://openalex.org/I99065089",
+      "name": "Tsinghua University",
+      "country": "CN",
+      "count": 205
+    },
+    {
+      "id": "https://openalex.org/I126520041",
+      "name": "University of Science and Technology of China",
+      "country": "CN",
+      "count": 200
+    },
+    {
+      "id": "https://openalex.org/I16609230",
+      "name": "Hunan University",
+      "country": "CN",
+      "count": 177
+    },
+    {
+      "id": "https://openalex.org/I20942203",
+      "name": "Hainan University",
+      "country": "CN",
+      "count": 174
+    },
+    {
+      "id": "https://openalex.org/I139660479",
+      "name": "Central South University",
+      "country": "CN",
+      "count": 173
+    },
+    {
+      "id": "https://openalex.org/I194450716",
+      "name": "Jilin University",
+      "country": "CN",
+      "count": 169
+    },
+    {
+      "id": "https://openalex.org/I116953780",
+      "name": "Tongji University",
+      "country": "CN",
+      "count": 168
+    },
+    {
+      "id": "https://openalex.org/I162868743",
+      "name": "Tianjin University",
+      "country": "CN",
+      "count": 165
+    },
+    {
+      "id": "https://openalex.org/I184983240",
+      "name": "Northeast Normal University",
+      "country": "CN",
+      "count": 161
+    },
+    {
+      "id": "https://openalex.org/I135237710",
+      "name": "Zhejiang Normal University",
+      "country": "CN",
+      "count": 160
+    },
+    {
+      "id": "https://openalex.org/I143413998",
+      "name": "Qingdao University of Science and Technology",
+      "country": "CN",
+      "count": 156
+    },
+    {
+      "id": "https://openalex.org/I38877650",
+      "name": "Zhengzhou University",
+      "country": "CN",
+      "count": 151
+    },
+    {
+      "id": "https://openalex.org/I90610280",
+      "name": "South China University of Technology",
+      "country": "CN",
+      "count": 149
+    },
+    {
+      "id": "https://openalex.org/I87445476",
+      "name": "Xi'an Jiaotong University",
+      "country": "CN",
+      "count": 144
+    },
+    {
+      "id": "https://openalex.org/I143868143",
+      "name": "Anhui University",
+      "country": "CN",
+      "count": 142
+    },
+    {
+      "id": "https://openalex.org/I191208505",
+      "name": "Xiamen University",
+      "country": "CN",
+      "count": 140
+    },
+    {
+      "id": "https://openalex.org/I55712492",
+      "name": "Zhejiang University of Technology",
+      "country": "CN",
+      "count": 135
+    },
+    {
+      "id": "https://openalex.org/I4210156571",
+      "name": "Collaborative Innovation Center of Chemistry for Energy Materials",
+      "country": "CN",
+      "count": 134
+    },
+    {
+      "id": "https://openalex.org/I24185976",
+      "name": "Sichuan University",
+      "country": "CN",
+      "count": 132
+    },
+    {
+      "id": "https://openalex.org/I180726961",
+      "name": "Shenzhen University",
+      "country": "CN",
+      "count": 131
+    },
+    {
+      "id": "https://openalex.org/I205640436",
+      "name": "Curtin University",
+      "country": "AU",
+      "count": 126
+    },
+    {
+      "id": "https://openalex.org/I9224756",
+      "name": "Northeastern University",
+      "country": "CN",
+      "count": 123
+    },
+    {
+      "id": "https://openalex.org/I181326427",
+      "name": "Donghua University",
+      "country": "CN",
+      "count": 122
+    },
+    {
+      "id": "https://openalex.org/I24943067",
+      "name": "Fudan University",
+      "country": "CN",
+      "count": 122
+    },
+    {
+      "id": "https://openalex.org/I76130692",
+      "name": "Zhejiang University",
+      "country": "CN",
+      "count": 120
+    },
+    {
+      "id": "https://openalex.org/I4210156066",
+      "name": "State Key Laboratory of Chemical Engineering",
+      "country": "CN",
+      "count": 118
+    },
+    {
+      "id": "https://openalex.org/I47689461",
+      "name": "Northeast Forestry University",
+      "country": "CN",
+      "count": 116
+    },
+    {
+      "id": "https://openalex.org/I204983213",
+      "name": "Harbin Institute of Technology",
+      "country": "CN",
+      "count": 112
+    },
+    {
+      "id": "https://openalex.org/I111599522",
+      "name": "Jiangnan University",
+      "country": "CN",
+      "count": 110
+    },
+    {
+      "id": "https://openalex.org/I205237279",
+      "name": "Nankai University",
+      "country": "CN",
+      "count": 109
+    },
+    {
+      "id": "https://openalex.org/I14243506",
+      "name": "Hong Kong Polytechnic University",
+      "country": "HK",
+      "count": 109
+    },
+    {
+      "id": "https://openalex.org/I143593769",
+      "name": "East China University of Science and Technology",
+      "country": "CN",
+      "count": 107
+    },
+    {
+      "id": "https://openalex.org/I92178344",
+      "name": "Anhui University of Technology",
+      "country": "CN",
+      "count": 104
+    },
+    {
+      "id": "https://openalex.org/I881766915",
+      "name": "Nanjing University",
+      "country": "CN",
+      "count": 102
+    },
+    {
+      "id": "https://openalex.org/I4210096899",
+      "name": "Jiangsu University of Science and Technology",
+      "country": "CN",
+      "count": 102
+    },
+    {
+      "id": "https://openalex.org/I96908189",
+      "name": "Xinjiang University",
+      "country": "CN",
+      "count": 101
+    },
+    {
+      "id": "https://openalex.org/I168719708",
+      "name": "City University of Hong Kong",
+      "country": "HK",
+      "count": 100
+    },
+    {
+      "id": "https://openalex.org/I92403157",
+      "name": "University of Science and Technology Beijing",
+      "country": "CN",
+      "count": 100
+    },
+    {
+      "id": "https://openalex.org/I76214153",
+      "name": "Lanzhou University",
+      "country": "CN",
+      "count": 95
+    },
+    {
+      "id": "https://openalex.org/I36399199",
+      "name": "Nanjing University of Science and Technology",
+      "country": "CN",
+      "count": 94
+    },
+    {
+      "id": "https://openalex.org/I4210114105",
+      "name": "Tsinghua–Berkeley Shenzhen Institute",
+      "country": "CN",
+      "count": 93
+    },
+    {
+      "id": "https://openalex.org/I115592961",
+      "name": "Jiangsu University",
+      "country": "CN",
+      "count": 93
+    },
+    {
+      "id": "https://openalex.org/I154099455",
+      "name": "Shandong University",
+      "country": "CN",
+      "count": 93
+    },
+    {
+      "id": "https://openalex.org/I4210153482",
+      "name": "Changzhou University",
+      "country": "CN",
+      "count": 93
+    },
+    {
+      "id": "https://openalex.org/I5681781",
+      "name": "The University of Adelaide",
+      "country": "AU",
+      "count": 93
+    },
+    {
+      "id": "https://openalex.org/I148128674",
+      "name": "University of Shanghai for Science and Technology",
+      "country": "CN",
+      "count": 92
+    },
+    {
+      "id": "https://openalex.org/I10660446",
+      "name": "Kunming University of Science and Technology",
+      "country": "CN",
+      "count": 89
+    },
+    {
+      "id": "https://openalex.org/I27357992",
+      "name": "Dalian University of Technology",
+      "country": "CN",
+      "count": 89
+    },
+    {
+      "id": "https://openalex.org/I80947539",
+      "name": "Fuzhou University",
+      "country": "CN",
+      "count": 88
+    },
+    {
+      "id": "https://openalex.org/I180585399",
+      "name": "Dalian Institute of Chemical Physics",
+      "country": "CN",
+      "count": 83
+    },
+    {
+      "id": "https://openalex.org/I47720641",
+      "name": "Huazhong University of Science and Technology",
+      "country": "CN",
+      "count": 83
+    },
+    {
+      "id": "https://openalex.org/I146620803",
+      "name": "Wenzhou University",
+      "country": "CN",
+      "count": 82
+    },
+    {
+      "id": "https://openalex.org/I150807315",
+      "name": "Guangxi University",
+      "country": "CN",
+      "count": 81
+    }
+  ]
+}

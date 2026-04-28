@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>徐恒越 | 机理化学与能源材料</title>
+    <meta
+      name="description"
+      content="徐恒越围绕能源材料机理、电子结构调控、界面化学与描述符驱动设计开展研究。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body data-page-lang="zh">
+    <header class="topbar">
+      <a class="brand" href="./index.html">徐恒越</a>
+      <nav class="nav">
+        <a href="#impact">引用地图</a>
+        <a href="#collaboration">合作网络</a>
+        <a href="#research">研究定位</a>
+        <a href="#news">新闻</a>
+        <a href="#publications">精选论文</a>
+        <a href="#scholar">学术数据</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="./en.html">EN</a>
+        <a class="active" href="./zh.html">中文</a>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section id="impact" class="hero-map-section">
+        <div class="hero-copy">
+          <div class="hero-identity">
+            <div class="hero-avatar-shell">
+              <img class="hero-avatar" src="./assets/avatar-hero.jpg" alt="徐恒越头像" />
+            </div>
+            <div class="hero-identity-copy">
+              <p class="identity-name">徐恒越</p>
+              <p class="identity-role">化学博士研究生</p>
+              <p class="identity-base">清华大学 · 墨尔本大学 · Curtin University</p>
+            </div>
+          </div>
+
+          <p class="section-kicker">机理化学与能源材料</p>
+          <h1>前沿态匹配决定界面氧化还原化学。</h1>
+          <p class="hero-summary">
+            以 donor-acceptor 前沿态框架统一 d-band 调控、Jahn-Teller 畸变与 C60 曲率界面。
+          </p>
+
+          <div class="topic-strip">
+            <span>前沿态</span>
+            <span>几何场</span>
+            <span>界面氧化还原</span>
+            <span>描述符设计</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="https://scholar.google.com/citations?user=CcOsCzwAAAAJ&hl=en" target="_blank" rel="noreferrer">
+              谷歌学术
+            </a>
+            <a class="secondary-button" href="#publications">精选论文</a>
+          </div>
+        </div>
+
+        <div class="hero-map-panel">
+          <div class="map-headline">
+            <div>
+              <p class="section-kicker">引用分布</p>
+              <h2>引用你的论文的位置，形成一张全球学术回响地图。</h2>
+            </div>
+            <p class="map-note">
+              这里展示的是引用论文作者机构所在国家/地区的聚合分布；合作单位网络在下一部分单独呈现。
+            </p>
+          </div>
+
+          <div class="map-toolbar">
+            <div id="map-region-controls" class="map-region-controls" aria-label="影响力地图区域筛选"></div>
+            <p id="map-toolbar-note" class="map-toolbar-note">全球概览</p>
+          </div>
+
+          <div class="citation-visual-grid">
+            <div class="map-stage">
+              <svg id="impact-map-svg" class="impact-map-svg" viewBox="0 0 1440 720" aria-label="全球引用分布地图"></svg>
+              <div id="map-tooltip" class="map-tooltip" hidden></div>
+            </div>
+            <div class="citation-network-panel">
+              <svg id="citation-network-svg" class="citation-network-svg" viewBox="0 0 720 720" aria-label="引用国家与地区圆形网络图"></svg>
+              <article id="citation-network-detail" class="citation-network-detail">
+                <span class="stat-label">引用网络</span>
+                <h3>点击节点或连线</h3>
+                <p>查看国家/地区、跨地区共现关系，以及代表性引用机构。</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="map-insights">
+            <article class="map-insight-card">
+              <span class="stat-label">当前区域</span>
+              <h3 id="map-region-title">全球概览</h3>
+              <p id="map-region-summary">按引用论文作者机构国家/地区聚合出的全球引用分布。</p>
+              <p id="map-region-cities" class="map-note">高频引用地区：中国、澳大利亚、韩国、美国、印度、德国</p>
+            </article>
+            <article class="map-insight-card">
+              <span class="stat-label">悬停节点</span>
+              <h3 id="map-node-title">中国</h3>
+              <p id="map-node-summary">引用论文作者机构国家/地区聚合节点。</p>
+              <p id="map-node-meta" class="map-note">东亚 · 引用分布节点</p>
+              <ul id="map-node-institutions" class="institution-mini-list" aria-label="当前地图节点机构"></ul>
+            </article>
+          </div>
+
+          <div class="hero-stats">
+            <article class="stat-card spotlight">
+              <span class="stat-label">总引用</span>
+              <strong data-metric="citations">3,016</strong>
+              <small id="scholar-sync-status">正在同步 Scholar</small>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">H 指数</span>
+              <strong data-metric="hIndex">29</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">引用学者</span>
+              <strong data-metric="citingScholars">1,319</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">机构覆盖</span>
+              <strong data-metric="institutions">1,180</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">国家 / 地区</span>
+              <strong data-metric="countries">42</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">可见节点</span>
+              <strong id="map-visible-nodes">15</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="collaboration" class="section collaboration-section">
+        <div class="section-heading">
+          <p class="section-kicker">论文合作网络</p>
+          <h2>合作单位之间的关系，以论文共著网络呈现。</h2>
+          <p class="section-note">
+            基于精选论文 DOI 的 OpenAlex 作者单位数据生成：节点是大学/研究所，连线表示它们在同一篇论文中共同出现。
+          </p>
+        </div>
+
+        <div class="collaboration-layout">
+          <div class="collaboration-map-shell">
+            <svg id="collaboration-map" class="collaboration-map" viewBox="0 0 1440 720" aria-label="合作单位全球分布地图"></svg>
+          </div>
+          <div class="collaboration-graph-shell">
+            <svg id="collaboration-graph" class="collaboration-graph" viewBox="0 0 1440 720" aria-label="论文合作单位网络图"></svg>
+          </div>
+          <article class="collaboration-detail">
+            <span class="stat-label">当前节点</span>
+            <h3 id="collaboration-node-title">清华大学</h3>
+            <p id="collaboration-node-summary">点击或悬停网络中的机构节点，查看作者、论文和机构来源信息。</p>
+            <p id="collaboration-node-meta" class="map-note">OpenAlex 作者单位数据</p>
+          </article>
+        </div>
+
+        <div id="institution-network" class="institution-network compact" aria-label="全球合作机构紧凑列表"></div>
+      </section>
+
+      <section id="research" class="section narrative-section">
+        <div class="section-heading compact">
+          <p class="section-kicker">核心命题</p>
+          <h2>几何场与前沿态共同生成可迁移描述符。</h2>
+        </div>
+
+        <div class="narrative-grid">
+          <article class="narrative-card">
+            <h3>统一前沿态理论</h3>
+            <p>把 d-band 调控、Jahn-Teller 畸变与 C60 曲率界面统一到更普适的 donor-acceptor 前沿态框架。</p>
+          </article>
+          <article class="narrative-card">
+            <h3>几何场参数化</h3>
+            <p>系统研究曲率、应变与非对称配位如何驱动局域对称性破缺和能级重组。</p>
+          </article>
+          <article class="narrative-card">
+            <h3>界面硫转化</h3>
+            <p>以阶段选择性的硫转化与分化的末端硫化物动力学刻画 Li/Na-S 界面反应。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="news" class="section news-section">
+        <div class="section-heading">
+          <p class="section-kicker">新闻</p>
+          <h2>最新论文、封面与研究动态可以集中展示在这里。</h2>
+          <p class="section-note">
+            这个板块可持续更新，适合放置封面接收、论文亮点、会议展示和图文消息。
+          </p>
+        </div>
+
+        <div id="news-feed" class="news-feed" data-lang="zh"></div>
+      </section>
+
+      <section id="publications" class="section publications-section">
+        <div class="section-heading">
+          <p class="section-kicker">精选论文</p>
+          <h2>机理论文把前沿态描述符转化为反应规律。</h2>
+          <p class="section-note">
+            代表性工作解析对称性破缺、能级重组与硫转化动力学之间的内在联系。
+          </p>
+        </div>
+
+        <div id="papers" class="publication-grid" data-lang="zh"></div>
+      </section>
+
+      <section id="scholar" class="section scholar-section">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">实时学术脉搏</p>
+            <h2>Scholar 指标优先在线更新，并以本地科研记录兜底。</h2>
+          </div>
+          <p id="scholar-updated" class="sync-text">最近检查：加载中</p>
+        </div>
+
+        <div class="scholar-grid">
+          <article class="scholar-card">
+            <h3>前沿态统一</h3>
+            <p>用 donor-acceptor 图景统一 d-band 调控、Jahn-Teller 畸变与曲率效应。</p>
+          </article>
+          <article class="scholar-card">
+            <h3>几何场变量</h3>
+            <p>曲率、应变和非对称配位构成可参数化的界面扰动变量。</p>
+          </article>
+          <article class="scholar-card">
+            <h3>反应输出</h3>
+            <p>选择性、能垒与末端硫化物动力学共同构成可解释的机理输出。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-heading compact">
+          <p class="section-kicker">学术合作</p>
+          <h2>欢迎围绕机理电化学与催化界面开展合作。</h2>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>邮箱</h3>
+            <p>xuhy24@mails.tsinghua.edu.cn</p>
+            <p>xuhy21@tsinghua.org.cn</p>
+          </article>
+          <article class="contact-card">
+            <h3>当前单位</h3>
+            <p>清华大学</p>
+            <p>化学</p>
+          </article>
+          <article class="contact-card">
+            <h3>访问经历</h3>
+            <p>墨尔本大学</p>
+            <p>Curtin University</p>
+            <p>深圳湾实验室</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span data-year></span> 徐恒越。</p>
+    </footer>
+
+    <script src="./site.js"></script>
+  </body>
+</html>

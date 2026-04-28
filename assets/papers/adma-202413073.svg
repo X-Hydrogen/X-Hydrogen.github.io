@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Operando electrochemical oxidation schematic</title>
+  <desc id="desc">A dark scientific graphic showing layered oxide restructuring, operando spectroscopy beams, and time-resolved electrochemical oxidation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10223d"/>
+      <stop offset=".52" stop-color="#173b58"/>
+      <stop offset="1" stop-color="#3d274e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".55" cy=".42" r=".55">
+      <stop offset="0" stop-color="#9be7ff" stop-opacity=".55"/>
+      <stop offset=".42" stop-color="#7bb4ff" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#glow)"/>
+  <g opacity=".24" stroke="#d7e7ff" stroke-width="1">
+    <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200"/>
+    <path d="M160 0V760M320 0V760M480 0V760M640 0V760M800 0V760M960 0V760"/>
+  </g>
+  <g transform="translate(132 160)">
+    <path d="M0 150C120 62 234 62 352 150S584 238 704 150" fill="none" stroke="#d7ecff" stroke-width="12" opacity=".22"/>
+    <path d="M0 230C120 142 234 142 352 230S584 318 704 230" fill="none" stroke="#d7ecff" stroke-width="12" opacity=".18"/>
+    <g fill="#f1c66f">
+      <circle cx="40" cy="142" r="22"/><circle cx="136" cy="96" r="18"/><circle cx="238" cy="104" r="20"/>
+      <circle cx="338" cy="148" r="23"/><circle cx="440" cy="190" r="18"/><circle cx="548" cy="194" r="22"/><circle cx="654" cy="154" r="20"/>
+    </g>
+    <g fill="#8fe1d2">
+      <circle cx="88" cy="228" r="17"/><circle cx="190" cy="184" r="20"/><circle cx="292" cy="190" r="16"/>
+      <circle cx="392" cy="232" r="19"/><circle cx="500" cy="276" r="17"/><circle cx="606" cy="270" r="19"/><circle cx="706" cy="226" r="16"/>
+    </g>
+    <g stroke="#ffffff" stroke-width="2" opacity=".34">
+      <path d="M40 142L88 228L136 96L190 184L238 104L292 190L338 148L392 232L440 190L500 276L548 194L606 270L654 154L706 226"/>
+    </g>
+  </g>
+  <g transform="translate(760 110)">
+    <circle cx="160" cy="160" r="112" fill="none" stroke="#a8d8ff" stroke-width="6" opacity=".44"/>
+    <circle cx="160" cy="160" r="70" fill="none" stroke="#f1c66f" stroke-width="4" opacity=".65"/>
+    <path d="M54 160H266M160 54V266M88 88L232 232M232 88L88 232" stroke="#a8d8ff" stroke-width="3" opacity=".28"/>
+    <circle cx="160" cy="160" r="14" fill="#fff7d6"/>
+    <path d="M160 160L326 42" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+    <path d="M160 160L326 42" stroke="#8fe1d2" stroke-width="22" stroke-linecap="round" opacity=".2" filter="url(#soft)"/>
+  </g>
+  <g transform="translate(116 585)" font-family="Manrope, Arial, sans-serif">
+    <text x="0" y="0" fill="#f1c66f" font-size="34" font-weight="800" letter-spacing="4">OPERANDO OXIDATION</text>
+    <text x="0" y="52" fill="#eef6ff" font-size="54" font-weight="800">Spatiotemporal Restructuring</text>
+    <text x="0" y="98" fill="#b9c9de" font-size="28">Advanced Materials · 2025 · 37 · 2413073</text>
+  </g>
+</svg>

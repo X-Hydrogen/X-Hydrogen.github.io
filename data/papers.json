@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Curvature-Gated Li/Na-S Redox Chemistry on C60: Stage-Selective Sulfur Regulation and Divergent Terminal Sulfide Kinetics",
+    "authors": "Hengyue Xu*",
+    "journal": "J. Phys. Chem. Lett.",
+    "year": 2026,
+    "doi": "https://doi.org/10.1021/acs.jpclett.6c00898",
+    "url": "https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00898",
+    "image": "./assets/papers/jpclett-6c00898.jpg",
+    "badge": "C60",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(186, 230, 255, 0.34), transparent 18%), radial-gradient(circle at 72% 58%, rgba(255, 214, 153, 0.28), transparent 22%), linear-gradient(135deg, #102a43, #1d4f6d 56%, #5c7c8a 120%)",
+    "summaryEn": "A JPC Letters study revealing how curvature-gated C60 surfaces regulate Li/Na-S redox chemistry through stage-selective sulfur conversion and divergent terminal sulfide kinetics.",
+    "summaryZh": "一篇 JPC Letters 论文，揭示曲率门控的 C60 表面如何通过阶段选择性的硫转化与分化的末端硫化物动力学调控 Li/Na-S 氧化还原化学。"
+  },
+  {
+    "title": "Electronegativity-Induced Jahn-Teller Distortion Boosts Li-S Conversion on Asymmetric Cu Single-Atom Catalysts",
+    "authors": "Hengyue Xu*",
+    "journal": "J. Phys. Chem. A",
+    "year": 2025,
+    "doi": "https://doi.org/10.1021/acs.jpca.5c03527",
+    "url": "https://pubs.acs.org/doi/10.1021/acs.jpca.5c03527",
+    "image": "./assets/papers/jpca-5c03527.jpg",
+    "badge": "Li-S",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(141, 208, 255, 0.46), transparent 18%), radial-gradient(circle at 72% 58%, rgba(225, 194, 133, 0.34), transparent 22%), linear-gradient(135deg, #12304f, #1c4c78 56%, #77542d 120%)",
+    "summaryEn": "A descriptor-driven Li-S catalysis study centered on Jahn-Teller distortion and asymmetric single-atom active sites.",
+    "summaryZh": "围绕 Jahn-Teller 畸变与不对称单原子活性位点展开的锂硫催化描述符研究。"
+  },
+  {
+    "title": "Bio-Inspired Curvature Engineering across the Periodic Table Tunes Hydrogen Adsorption in Single-Atom Catalysts",
+    "authors": "Hengyue Xu*",
+    "journal": "J. Phys. Chem. Lett.",
+    "year": 2026,
+    "doi": "https://doi.org/10.1021/acs.jpclett.5c03434",
+    "url": "https://pubs.acs.org/doi/10.1021/acs.jpclett.5c03434",
+    "image": "./assets/papers/jpclett-5c03434.jpg",
+    "badge": "SAC",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(188, 255, 201, 0.28), transparent 18%), radial-gradient(circle at 72% 58%, rgba(130, 172, 255, 0.32), transparent 22%), linear-gradient(135deg, #123040, #1f665e 56%, #3e8e85 120%)",
+    "summaryEn": "A compact theoretical study showing how bio-inspired curvature engineering tunes hydrogen adsorption across single-atom catalysts.",
+    "summaryZh": "一项简洁的理论研究，展示受生物启发的曲率工程如何在单原子催化剂中调控氢吸附。"
+  },
+  {
+    "title": "High-dimensional strain unlocks fast polysulfide redox kinetics for lithium-sulfur batteries",
+    "authors": "J.-L. Yang†; Hengyue Xu†; T. Xiao et al.",
+    "journal": "Nature Communications",
+    "year": 2025,
+    "doi": "https://doi.org/10.1038/s41467-025-63969-z",
+    "url": "https://www.nature.com/articles/s41467-025-63969-z",
+    "image": "./assets/papers/ncomms-63969-fig1.png",
+    "badge": "NC",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(255, 174, 132, 0.3), transparent 18%), radial-gradient(circle at 72% 58%, rgba(181, 122, 255, 0.34), transparent 22%), linear-gradient(135deg, #2a2448, #2c4975 56%, #7764c3 120%)",
+    "summaryEn": "A collaborative high-profile contribution showing how strain engineering accelerates Li-S redox kinetics.",
+    "summaryZh": "展示高维应变如何提升锂硫体系氧化还原动力学的高影响力合作成果。"
+  },
+  {
+    "title": "Balanced d-Band Model: A Framework for Balancing Redox Reactions in Lithium-Sulfur Batteries",
+    "authors": "Wei Xiao; Kisoo Yoo; Jonghoon Kim; Hengyue Xu*",
+    "journal": "ACS Nano",
+    "year": 2024,
+    "doi": "https://doi.org/10.1021/acsnano.4c10348",
+    "url": "https://pubs.acs.org/doi/10.1021/acsnano.4c10348",
+    "image": "./assets/papers/acsnano-4c10348.jpg",
+    "badge": "Nano",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(201, 220, 255, 0.28), transparent 18%), radial-gradient(circle at 72% 58%, rgba(145, 114, 255, 0.28), transparent 22%), linear-gradient(135deg, #18253c, #30486a 56%, #60769c 120%)",
+    "summaryEn": "An ACS Nano corresponding-author paper proposing a balanced d-band framework for regulating lithium-sulfur battery redox chemistry.",
+    "summaryZh": "一篇 ACS Nano 通讯论文，提出 balanced d-band framework 用于调控锂硫电池中的氧化还原反应。"
+  },
+  {
+    "title": "Operando Studies Redirect Spatiotemporal Restructuration of Model Coordinated Oxides in Electrochemical Oxidation",
+    "authors": "D. Guan†; Hengyue Xu†; Y. C. Huang† et al.",
+    "journal": "Advanced Materials",
+    "year": 2024,
+    "doi": "https://doi.org/10.1002/adma.202413073",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202413073",
+    "image": "./assets/papers/adma-202413073.svg",
+    "badge": "AM",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(179, 233, 255, 0.3), transparent 18%), radial-gradient(circle at 72% 58%, rgba(255, 140, 188, 0.24), transparent 22%), linear-gradient(135deg, #16273f, #2a5973 56%, #5e809e 120%)",
+    "summaryEn": "A high-impact operando study on spatiotemporal restructuring in electrochemical oxidation systems.",
+    "summaryZh": "围绕电化学氧化过程中时空动态重构展开的高影响力 operando 研究。"
+  },
+  {
+    "title": "Decoupling Redox Kinetics with Complementary d-Band Catalysis for High-Performance Lithium-Sulfur Batteries",
+    "authors": "Wei Xiao; Kisoo Yoo; Jong-Hoon Kim; Hengyue Xu",
+    "journal": "ACS Nano",
+    "year": 2025,
+    "doi": "https://doi.org/10.1021/acsnano.5c05449",
+    "url": "https://pubs.acs.org/doi/10.1021/acsnano.5c05449",
+    "image": "./assets/papers/acsnano-5c05449.jpg",
+    "badge": "d-Band",
+    "fallback": "radial-gradient(circle at 24% 26%, rgba(201, 220, 255, 0.28), transparent 18%), radial-gradient(circle at 72% 58%, rgba(145, 114, 255, 0.28), transparent 22%), linear-gradient(135deg, #18253c, #30486a 56%, #60769c 120%)",
+    "summaryEn": "An ACS Nano study on complementary d-band catalysis for decoupling redox kinetics in high-performance Li-S batteries.",
+    "summaryZh": "ACS Nano 论文，围绕互补 d-band 催化解耦高性能锂硫电池中的氧化还原动力学。"
+  }
+]

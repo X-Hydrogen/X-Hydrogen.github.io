@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-04-28",
+    "tagEn": "Cover Watch",
+    "tagZh": "封面动态",
+    "titleEn": "A ready slot for the next cover story",
+    "titleZh": "预留给下一篇封面论文的新闻位",
+    "summaryEn": "Use this space for cover acceptance, graphical highlights, or a short research note with a strong visual lead.",
+    "summaryZh": "这个位置可以放封面接收、论文图文亮点或近期研究动态，之后只需要替换文字和图片即可。",
+    "image": "./assets/papers/jpclett-6c00898.jpg",
+    "url": "https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00898",
+    "featured": true
+  },
+  {
+    "date": "2025-12-01",
+    "tagEn": "Publication",
+    "tagZh": "论文动态",
+    "titleEn": "Operando restructuring study in Advanced Materials",
+    "titleZh": "Advanced Materials operando 重构研究",
+    "summaryEn": "A visual placeholder for highlighting electrochemical oxidation, operando spectroscopy, and spatiotemporal restructuring.",
+    "summaryZh": "用于展示电化学氧化、operando 表征与时空动态重构主题的图文新闻卡片。",
+    "image": "./assets/papers/adma-202413073.svg",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202413073",
+    "featured": false
+  }
+]
