@@ -1432,10 +1432,6 @@ const renderCitationNetwork = (mapData) => {
     nodeElements.set(node.id, { circle, node: plotted });
   });
 
-  const defaultEdge = mapData.network.edges.find(
-    (edge) => (edge.source === "cn" && edge.target === "us") || (edge.source === "us" && edge.target === "cn")
-  );
-
   const core = createSvgNode("circle", {
     cx,
     cy,
@@ -1451,14 +1447,9 @@ const renderCitationNetwork = (mapData) => {
   });
   coreText.textContent = pageLang === "zh" ? "引用网络" : "Citations";
   citationNetworkRoot.append(edgeLayer, core, coreText, nodeLayer, labelLayer);
-  if (defaultEdge) {
-    describeEdge(defaultEdge);
-    setActiveCitation(null, defaultEdge);
-  } else {
-    const defaultCitationId = nodeById.has("us") ? "us" : nodes[0].id;
-    describeNode(nodeById.get(defaultCitationId) || nodes[0]);
-    setActiveCitation(defaultCitationId);
-  }
+  const defaultCitationId = nodeById.has("us") ? "us" : nodes[0].id;
+  describeNode(nodeById.get(defaultCitationId) || nodes[0]);
+  setActiveCitation(defaultCitationId);
 };
 
 const renderPapers = (paperData) => {
