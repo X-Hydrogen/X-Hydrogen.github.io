@@ -398,23 +398,43 @@ const fetchLiveScholarMetrics = () =>
     })
     .then(parseScholarMetricsFromHtml);
 
-fetchLocalScholarMetrics()
-  .then((response) => {
-    updateMetricNodes(scholarMetricSubset(response));
-    setScholarStatus("local", response);
-    return fetchLiveScholarMetrics()
-      .then((liveMetrics) => {
-        const merged = { ...response, ...liveMetrics };
-        updateMetricNodes(scholarMetricSubset(merged));
-        setScholarStatus("live", merged);
-      })
-      .catch(() => {
-        setScholarStatus("blocked", response);
-      });
-  })
-  .catch(() => {
-    setScholarStatus("failed", staticMetrics);
-  });
+// Prefer previously saved live Scholar metrics (persisted after a successful live sync)
+const persistedLive = (() => {
+  try {
+    const raw = localStorage.getItem("xhyd_scholar_live");
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+})();
+
+if (persistedLive) {
+  updateMetricNodes(scholarMetricSubset(persistedLive));
+  setScholarStatus("live", persistedLive);
+} else {
+  fetchLocalScholarMetrics()
+    .then((response) => {
+      updateMetricNodes(scholarMetricSubset(response));
+      setScholarStatus("local", response);
+      return fetchLiveScholarMetrics()
+        .then((liveMetrics) => {
+          // live metrics override local values; persist for future visits
+          try {
+            localStorage.setItem("xhyd_scholar_live", JSON.stringify(liveMetrics));
+          } catch (e) {
+            // ignore storage failures
+          }
+          updateMetricNodes(scholarMetricSubset(liveMetrics));
+          setScholarStatus("live", liveMetrics);
+        })
+        .catch(() => {
+          setScholarStatus("blocked", response);
+        });
+    })
+    .catch(() => {
+      setScholarStatus("failed", staticMetrics);
+    });
+}
 
 const insideEllipse = (x, y, ellipse) => {
   const nx = (x - ellipse.cx) / ellipse.rx;
@@ -450,6 +470,35 @@ const appendWorldLand = (root) => {
 const regionLabel = (region) => (pageLang === "zh" ? region.labelZh : region.labelEn);
 const regionSummary = (region) => (pageLang === "zh" ? region.summaryZh : region.summaryEn);
 const regionCities = (region) => (pageLang === "zh" ? region.citiesZh : region.citiesEn);
+const citationTopRegions = (mapData, region) => {
+  if (!mapData?.network?.nodes?.length || region?.id !== "all") {
+    return regionCities(region);
+  }
+
+  const aggregate = new Map();
+  mapData.network.nodes.forEach((node) => {
+    const key = node.region === "europe" ? "eu" : node.id;
+    const count = Number(node.citations || 0);
+    const label = node.region === "europe"
+      ? pageLang === "zh"
+        ? "欧盟"
+        : "European Union"
+      : pageLang === "zh"
+        ? node.labelZh || node.labelEn || node.label
+        : node.labelEn || node.labelZh || node.label;
+    const current = aggregate.get(key) || { label, citations: 0 };
+    current.citations += count;
+    current.label = label;
+    aggregate.set(key, current);
+  });
+
+  const separator = pageLang === "zh" ? "、" : ", ";
+  return [...aggregate.values()]
+    .sort((left, right) => right.citations - left.citations)
+    .slice(0, 6)
+    .map((item) => item.label)
+    .join(separator);
+};
 const nodeRole = (node) => (pageLang === "zh" ? node.roleZh : node.roleEn);
 const nodeLabel = (node) => (pageLang === "zh" ? node.labelZh || node.label : node.labelEn || node.label);
 const nodeInstitutions = (node) => node.institutions || [];
@@ -536,7 +585,9 @@ const updateMapInfo = () => {
   }
   if (regionCitiesNode) {
     regionCitiesNode.textContent =
-      pageLang === "zh" ? `高频引用地区：${regionCities(region)}` : `Top citing regions: ${regionCities(region)}`;
+      pageLang === "zh"
+        ? `高频引用地区：${citationTopRegions(mapState.data, region)}`
+        : `Top citing regions: ${citationTopRegions(mapState.data, region)}`;
   }
   if (nodeTitleNode) {
     nodeTitleNode.textContent = nodeLabel(hoverNode);
@@ -991,7 +1042,7 @@ const renderImpactMap = (mapData) => {
   mapState.pathEls.clear();
   mapState.labelEls.clear();
   mapState.haloEls.clear();
-  mapState.hoverNodeId = mapData.nodes[0]?.id || mapData.center.id;
+  mapState.hoverNodeId = mapData.nodes.find((node) => node.id === "us")?.id || mapData.nodes[0]?.id || mapData.center.id;
   mapRoot.innerHTML = "";
   updateMetricNodes({
     citations: mapData.author?.citedByCount || staticMetrics.citations,
@@ -1112,18 +1163,12 @@ const renderCitationNetwork = (mapData) => {
   const radius = 255;
 
   const describeNode = (node) => {
-    const institutions = (node.institutions || []).map((item) => citationInstitutionName(item));
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "引用地区节点" : "Citation Region",
       title: `${nodeLabel(node)} · ${new Intl.NumberFormat("en-US").format(node.citations)} ${pageLang === "zh" ? "篇引用作品" : "citing works"}`,
-      body:
-        institutions.length > 0
-          ? pageLang === "zh"
-            ? `代表性引用机构：${formatList(institutions, 4)}。`
-            : `Representative citing institutions: ${formatList(institutions, 4)}.`
-          : pageLang === "zh"
-            ? "该节点代表引用作品作者机构所在国家/地区。"
-            : "This node represents author-institution geography in citing works.",
+      body: pageLang === "zh"
+        ? "该节点代表引用作品作者机构所在国家/地区。"
+        : "This node represents author-institution geography in citing works.",
     });
   };
 
@@ -1133,15 +1178,12 @@ const renderCitationNetwork = (mapData) => {
     if (!source || !target) {
       return;
     }
-    const sourceInst = (source.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
-    const targetInst = (target.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "跨地区引用共现" : "Cross-Region Link",
       title: `${nodeLabel(source)} ↔ ${nodeLabel(target)}`,
-      body:
-        pageLang === "zh"
-          ? `${edge.weight} 篇引用作品的作者机构同时连接这两个地区。代表机构：${formatList([...sourceInst, ...targetInst], 4)}。`
-          : `${edge.weight} citing works connect these regions through author institutions. Representative institutions: ${formatList([...sourceInst, ...targetInst], 4)}.`,
+      body: pageLang === "zh"
+        ? `${edge.weight} 篇引用作品同时连接这两个地区。`
+        : `${edge.weight} citing works connect these regions.`,
     });
   };
 
@@ -1220,6 +1262,10 @@ const renderCitationNetwork = (mapData) => {
     nodeElements.set(node.id, { circle, node });
   });
 
+  const defaultEdge = mapData.network.edges.find(
+    (edge) => (edge.source === "cn" && edge.target === "us") || (edge.source === "us" && edge.target === "cn")
+  );
+
   const core = createSvgNode("circle", {
     cx,
     cy,
@@ -1235,8 +1281,13 @@ const renderCitationNetwork = (mapData) => {
   });
   coreText.textContent = pageLang === "zh" ? "引用网络" : "Citations";
   citationNetworkRoot.append(edgeLayer, core, coreText, nodeLayer, labelLayer);
-  describeNode(nodes[0]);
-  setActiveCitation(nodes[0].id);
+  if (defaultEdge) {
+    describeEdge(defaultEdge);
+    setActiveCitation(null, defaultEdge);
+  } else {
+    describeNode(nodes[0]);
+    setActiveCitation(nodes[0].id);
+  }
 };
 
 const renderPapers = (paperData) => {
