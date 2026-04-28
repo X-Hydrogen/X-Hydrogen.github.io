@@ -654,7 +654,21 @@
       "roleZh": "8 篇引用作品包含位于挪威的作者机构。",
       "institutions": []
     },
-    
+    {
+      "id": "iq",
+      "label": "IQ",
+      "labelEn": "Iraq",
+      "labelZh": "IQ",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 8,
+      "citations": 7,
+      "authorshipLinks": 16,
+      "roleEn": "7 unique citing works include author institutions in Iraq.",
+      "roleZh": "7 篇引用作品包含位于IQ的作者机构。",
+      "institutions": []
+    },
     {
       "id": "mx",
       "label": "MX",
@@ -1525,7 +1539,21 @@
       "roleZh": "1 篇引用作品包含位于LU的作者机构。",
       "institutions": []
     },
-    
+    {
+      "id": "ug",
+      "label": "UG",
+      "labelEn": "Uganda",
+      "labelZh": "UG",
+      "region": "all",
+      "x": 720,
+      "y": 311,
+      "r": 5,
+      "citations": 1,
+      "authorshipLinks": 11,
+      "roleEn": "1 unique citing works include author institutions in Uganda.",
+      "roleZh": "1 篇引用作品包含位于UG的作者机构。",
+      "institutions": []
+    }
   ],
   "network": {
     "nodes": [
@@ -2463,7 +2491,11 @@
         "target": "in",
         "weight": 3
       },
-      
+      {
+        "source": "cn",
+        "target": "iq",
+        "weight": 3
+      },
       {
         "source": "gb",
         "target": "kr",
@@ -2489,7 +2521,11 @@
         "target": "us",
         "weight": 3
       },
-      
+      {
+        "source": "iq",
+        "target": "sa",
+        "weight": 3
+      },
       {
         "source": "gb",
         "target": "in",
