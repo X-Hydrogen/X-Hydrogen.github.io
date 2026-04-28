@@ -269,12 +269,12 @@ const cutouts = [
 ];
 
 const staticMetrics = {
-  citations: 3016,
-  hIndex: 29,
+  citations: 3175,
+  hIndex: 30,
   citingScholars: 1319,
   institutions: 1180,
   countries: 42,
-  lastUpdated: "2026-04-10",
+  lastUpdated: "2026-04-28",
 };
 
 const scholarMessages = {
