@@ -449,43 +449,35 @@ const appendWorldLand = (root) => {
 
 const regionLabel = (region) => (pageLang === "zh" ? region.labelZh : region.labelEn);
 const regionSummary = (region) => (pageLang === "zh" ? region.summaryZh : region.summaryEn);
-const regionCities = (region) => {
-  if (!region) return "";
-  // For the global view, compute top citing regions dynamically and aggregate European Union.
-  if (region.id === "all" && mapState?.data?.nodes?.length) {
-    const nodes = mapState.data.nodes || [];
-    const nodeById = new Map(nodes.map((n) => [n.id, n]));
-
-    const EU_CODES = new Set([
-      "at","be","bg","hr","cy","cz","dk","ee","fi","fr","de","gr","hu","ie","it","lv","lt","lu","mt","nl","pl","pt","ro","sk","si","es",
-    ]);
-
-    const groups = {
-      "China": new Set(["cn"]),
-      "European Union": EU_CODES,
-      "United States": new Set(["us"]),
-      "Australia": new Set(["au"]),
-      "South Korea": new Set(["kr"]),
-      "Hong Kong SAR China": new Set(["hk"]),
-      "India": new Set(["in"]),
-    };
-
-    const sums = [];
-    Object.entries(groups).forEach(([label, ids]) => {
-      let total = 0;
-      ids.forEach((id) => {
-        const n = nodeById.get(id);
-        if (n && Number.isFinite(n.citations)) total += n.citations;
-      });
-      if (total > 0) sums.push({ label, total });
-    });
-
-    // Sort descending by total and return comma-separated labels
-    sums.sort((a, b) => b.total - a.total);
-    return sums.map((s) => s.label).join(", ");
+const regionCities = (region) => (pageLang === "zh" ? region.citiesZh : region.citiesEn);
+const citationTopRegions = (mapData, region) => {
+  if (!mapData?.network?.nodes?.length || region?.id !== "all") {
+    return regionCities(region);
   }
 
-  return pageLang === "zh" ? region.citiesZh : region.citiesEn;
+  const aggregate = new Map();
+  mapData.network.nodes.forEach((node) => {
+    const key = node.region === "europe" ? "eu" : node.id;
+    const count = Number(node.citations || 0);
+    const label = node.region === "europe"
+      ? pageLang === "zh"
+        ? "欧盟"
+        : "European Union"
+      : pageLang === "zh"
+        ? node.labelZh || node.labelEn || node.label
+        : node.labelEn || node.labelZh || node.label;
+    const current = aggregate.get(key) || { label, citations: 0 };
+    current.citations += count;
+    current.label = label;
+    aggregate.set(key, current);
+  });
+
+  const separator = pageLang === "zh" ? "、" : ", ";
+  return [...aggregate.values()]
+    .sort((left, right) => right.citations - left.citations)
+    .slice(0, 6)
+    .map((item) => item.label)
+    .join(separator);
 };
 const nodeRole = (node) => (pageLang === "zh" ? node.roleZh : node.roleEn);
 const nodeLabel = (node) => (pageLang === "zh" ? node.labelZh || node.label : node.labelEn || node.label);
@@ -573,7 +565,9 @@ const updateMapInfo = () => {
   }
   if (regionCitiesNode) {
     regionCitiesNode.textContent =
-      pageLang === "zh" ? `高频引用地区：${regionCities(region)}` : `Top citing regions: ${regionCities(region)}`;
+      pageLang === "zh"
+        ? `高频引用地区：${citationTopRegions(mapState.data, region)}`
+        : `Top citing regions: ${citationTopRegions(mapState.data, region)}`;
   }
   if (nodeTitleNode) {
     nodeTitleNode.textContent = nodeLabel(hoverNode);
@@ -1217,8 +1211,7 @@ const renderImpactMap = (mapData) => {
   mapState.pathEls.clear();
   mapState.labelEls.clear();
   mapState.haloEls.clear();
-  // Default hover: prefer United States if present, otherwise fall back to first node
-  mapState.hoverNodeId = mapData.nodes.find((n) => n.id === "us") ? "us" : mapData.nodes[0]?.id || mapData.center.id;
+  mapState.hoverNodeId = mapData.nodes.find((node) => node.id === "us")?.id || mapData.nodes[0]?.id || mapData.center.id;
   mapRoot.innerHTML = "";
   updateMetricNodes({
     citations: mapData.author?.citedByCount || staticMetrics.citations,
@@ -1342,10 +1335,9 @@ const renderCitationNetwork = (mapData) => {
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "引用地区节点" : "Citation Region",
       title: `${nodeLabel(node)} · ${new Intl.NumberFormat("en-US").format(node.citations)} ${pageLang === "zh" ? "篇引用作品" : "citing works"}`,
-      body:
-        pageLang === "zh"
-          ? "该节点代表引用作品作者机构所在国家/地区。"
-          : "This node represents author-institution geography in citing works.",
+      body: pageLang === "zh"
+        ? "该节点代表引用作品作者机构所在国家/地区。"
+        : "This node represents author-institution geography in citing works.",
     });
   };
 
@@ -1355,15 +1347,12 @@ const renderCitationNetwork = (mapData) => {
     if (!source || !target) {
       return;
     }
-    const sourceInst = (source.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
-    const targetInst = (target.institutions || []).map((item) => citationInstitutionName(item)).slice(0, 2);
     updateCitationNetworkDetail({
       kicker: pageLang === "zh" ? "跨地区引用共现" : "Cross-Region Link",
       title: `${nodeLabel(source)} ↔ ${nodeLabel(target)}`,
-      body:
-        pageLang === "zh"
-          ? `${edge.weight} 篇引用作品的作者机构同时连接这两个地区。代表机构：${formatList([...sourceInst, ...targetInst], 4)}。`
-          : `${edge.weight} citing works connect these regions through author institutions. Representative institutions: ${formatList([...sourceInst, ...targetInst], 4)}.`,
+      body: pageLang === "zh"
+        ? `${edge.weight} 篇引用作品同时连接这两个地区。`
+        : `${edge.weight} citing works connect these regions.`,
     });
   };
 
@@ -1443,6 +1432,10 @@ const renderCitationNetwork = (mapData) => {
     nodeElements.set(node.id, { circle, node: plotted });
   });
 
+  const defaultEdge = mapData.network.edges.find(
+    (edge) => (edge.source === "cn" && edge.target === "us") || (edge.source === "us" && edge.target === "cn")
+  );
+
   const core = createSvgNode("circle", {
     cx,
     cy,
@@ -1458,10 +1451,14 @@ const renderCitationNetwork = (mapData) => {
   });
   coreText.textContent = pageLang === "zh" ? "引用网络" : "Citations";
   citationNetworkRoot.append(edgeLayer, core, coreText, nodeLayer, labelLayer);
-  // Default citation selection: prefer United States node when available
-  const defaultCitationId = nodeById.has("us") ? "us" : nodes[0].id;
-  describeNode(nodeById.get(defaultCitationId) || nodes[0]);
-  setActiveCitation(defaultCitationId);
+  if (defaultEdge) {
+    describeEdge(defaultEdge);
+    setActiveCitation(null, defaultEdge);
+  } else {
+    const defaultCitationId = nodeById.has("us") ? "us" : nodes[0].id;
+    describeNode(nodeById.get(defaultCitationId) || nodes[0]);
+    setActiveCitation(defaultCitationId);
+  }
 };
 
 const renderPapers = (paperData) => {
