@@ -457,6 +457,16 @@ const institutionName = (item) => (pageLang === "zh" ? item.nameZh || item.nameE
 const institutionType = (item) => (pageLang === "zh" ? item.typeZh || item.typeEn : item.typeEn || item.typeZh);
 const institutionCountry = (item) => (pageLang === "zh" ? item.countryZh || item.country : item.country || item.countryZh);
 const citationInstitutionName = (item) => (pageLang === "zh" ? item.nameZh || item.nameEn || item.name : item.nameEn || item.nameZh || item.name);
+const paperLabel = (paper) => {
+  if (!paper) {
+    return "";
+  }
+  if (typeof paper === "string") {
+    return paper;
+  }
+  const title = paper.title || paper.doi || paper.id || "";
+  return paper.year ? `${title} (${paper.year})` : title;
+};
 
 const formatList = (items, limit = 4) => {
   const visible = items.slice(0, limit);
@@ -645,10 +655,11 @@ const setCollaborationActiveNode = (nodeId) => {
         : `${institutionCountry(node)}${node.city ? ` · ${node.city}` : ""}. Associated authors: ${authors || "No author metadata available"}.`;
   }
   if (collaborationMetaNode) {
+    const paperTitles = (node.papers || []).slice(0, 2).map(paperLabel).filter(Boolean);
     collaborationMetaNode.textContent =
       pageLang === "zh"
-        ? `${node.paperCount} 篇相关论文 · ${node.papers.slice(0, 2).join("；")}`
-        : `${node.paperCount} linked papers · ${node.papers.slice(0, 2).join("; ")}`;
+        ? `${node.paperCount} 篇相关论文${paperTitles.length ? ` · ${paperTitles.join("；")}` : ""}`
+        : `${node.paperCount} linked papers${paperTitles.length ? ` · ${paperTitles.join("; ")}` : ""}`;
   }
 };
 
