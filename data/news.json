@@ -6,21 +6,33 @@
     "titleEn": "Latest sole-author JPCL paper selected as the issue front cover",
     "titleZh": "最新单人作者 JPCL 论文入选整期 Front Cover",
     "summaryEn": "Hengyue Xu's latest sole-author paper, also his fourth sole-author paper to date, was selected by ACS Publications for the front cover of an issue of The Journal of Physical Chemistry Letters.",
-    "summaryZh": "徐恒岳最新单人作者论文，也是迄今第 4 篇单人作者论文，被 ACS Publications 选为 The Journal of Physical Chemistry Letters 的整期 Front Cover。",
+    "summaryZh": "徐恒越最新单人作者论文，也是迄今第 4 篇单人作者论文，被 ACS Publications 选为 The Journal of Physical Chemistry Letters 的整期 Front Cover。",
     "image": "./assets/papers/jpclett-6c00898-front-cover.jpg",
     "url": "https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00898",
     "featured": true
   },
   {
-    "date": "2025-12-01",
-    "tagEn": "Publication",
-    "tagZh": "论文动态",
-    "titleEn": "Operando restructuring study in Advanced Materials",
-    "titleZh": "Advanced Materials operando 重构研究",
-    "summaryEn": "A visual placeholder for highlighting electrochemical oxidation, operando spectroscopy, and spatiotemporal restructuring.",
-    "summaryZh": "用于展示电化学氧化、operando 表征与时空动态重构主题的图文新闻卡片。",
-    "image": "./assets/papers/adma-202413073.svg",
-    "url": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202413073",
+    "date": "2023-11-02",
+    "tagEn": "Cover Paper",
+    "tagZh": "封面论文",
+    "titleEn": "Energy & Fuels cover highlights a first-author hydrogen-evolution study",
+    "titleZh": "Energy & Fuels 封面展示第一作者析氢研究",
+    "summaryEn": "Hengyue Xu's first-author paper on theoretical core-shell 3d-metal nanocluster design for efficient hydrogen evolution was selected as an Energy & Fuels cover paper.",
+    "summaryZh": "徐恒越作为第一作者的高效析氢核壳 3d 金属纳米簇理论设计论文入选 Energy & Fuels 封面论文。",
+    "image": "./assets/papers/energyfuels-3c02448-cover.png",
+    "url": "https://doi.org/10.1021/acs.energyfuels.3c02448",
+    "featured": false
+  },
+  {
+    "date": "2023-05-17",
+    "tagEn": "Cover Paper",
+    "tagZh": "封面论文",
+    "titleEn": "Small cover highlights a last-author corresponding-author paper",
+    "titleZh": "Small 封面展示末位通讯作者论文",
+    "summaryEn": "Hengyue Xu's last-author corresponding-author paper, The Dual-Site Adsorption and High Redox Activity Enabled by Hybrid Organic-Inorganic Vanadyl Ethylene Glycolate for High-Rate and Long-Durability Lithium-Sulfur Batteries, was selected as a Small cover paper.",
+    "summaryZh": "徐恒越作为末位通讯作者的 The Dual-Site Adsorption and High Redox Activity Enabled by Hybrid Organic-Inorganic Vanadyl Ethylene Glycolate for High-Rate and Long-Durability Lithium-Sulfur Batteries 入选 Small 封面论文。",
+    "image": "./assets/papers/small-202206750-cover.png",
+    "url": "https://doi.org/10.1002/smll.202206750",
     "featured": false
   }
 ]

@@ -31,7 +31,7 @@ const collaborationSummaryNode = document.getElementById("collaboration-node-sum
 const collaborationMetaNode = document.getElementById("collaboration-node-meta");
 
 const scholarProfileUrl = "https://scholar.google.com/citations?user=CcOsCzwAAAAJ&hl=en";
-const dataVersion = "20260428c";
+const dataVersion = "20260502a";
 
 const defaultMapData = {
   center: {
@@ -1447,6 +1447,28 @@ const renderPapers = (paperData) => {
     return;
   }
 
+  const appendHighlightedAuthorText = (element, text) => {
+    const pattern = /Hengyue Xu[†*]*/g;
+    let lastIndex = 0;
+    let match = pattern.exec(text);
+
+    while (match) {
+      if (match.index > lastIndex) {
+        element.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+      }
+
+      const strong = document.createElement("strong");
+      strong.textContent = match[0];
+      element.appendChild(strong);
+      lastIndex = pattern.lastIndex;
+      match = pattern.exec(text);
+    }
+
+    if (lastIndex < text.length) {
+      element.appendChild(document.createTextNode(text.slice(lastIndex)));
+    }
+  };
+
   papersRoot.innerHTML = "";
   paperData.forEach((paper) => {
     const card = document.createElement("article");
@@ -1486,7 +1508,12 @@ const renderPapers = (paperData) => {
 
     const meta = document.createElement("p");
     meta.className = "paper-meta";
-    meta.textContent = paper.authors;
+    appendHighlightedAuthorText(meta, paper.authors);
+
+    const contributionText = pageLang === "zh" ? paper.contributionZh : paper.contributionEn;
+    const contribution = document.createElement("p");
+    contribution.className = "paper-contribution";
+    contribution.textContent = contributionText;
 
     const summary = document.createElement("p");
     summary.textContent = pageLang === "zh" ? paper.summaryZh : paper.summaryEn;
@@ -1508,7 +1535,11 @@ const renderPapers = (paperData) => {
         links.appendChild(link);
       });
 
-    card.append(cover, tag, title, meta, summary, links);
+    card.append(cover, tag, title, meta);
+    if (contributionText) {
+      card.appendChild(contribution);
+    }
+    card.append(summary, links);
     papersRoot.appendChild(card);
   });
 };
