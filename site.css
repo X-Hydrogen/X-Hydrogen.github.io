@@ -1317,6 +1317,20 @@ a {
   margin: 0.2rem 0 0.65rem;
 }
 
+.paper-meta strong {
+  color: #7dd3fc;
+  font-weight: 900;
+}
+
+.paper-contribution {
+  margin: 0 0 0.55rem;
+  color: #d8e8ff;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .paper-links {
   display: flex;
   flex-wrap: wrap;
