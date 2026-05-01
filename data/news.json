@@ -1,13 +1,13 @@
 [
   {
-    "date": "2026-04-28",
-    "tagEn": "Cover Watch",
-    "tagZh": "封面动态",
-    "titleEn": "A ready slot for the next cover story",
-    "titleZh": "预留给下一篇封面论文的新闻位",
-    "summaryEn": "Use this space for cover acceptance, graphical highlights, or a short research note with a strong visual lead.",
-    "summaryZh": "这个位置可以放封面接收、论文图文亮点或近期研究动态，之后只需要替换文字和图片即可。",
-    "image": "./assets/papers/jpclett-6c00898.jpg",
+    "date": "2026-05-01",
+    "tagEn": "Front Cover",
+    "tagZh": "封面论文",
+    "titleEn": "Latest sole-author JPCL paper selected as the issue front cover",
+    "titleZh": "最新单人作者 JPCL 论文入选整期 Front Cover",
+    "summaryEn": "Hengyue Xu's latest sole-author paper, also his fourth sole-author paper to date, was selected by ACS Publications for the front cover of an issue of The Journal of Physical Chemistry Letters.",
+    "summaryZh": "徐恒岳最新单人作者论文，也是迄今第 4 篇单人作者论文，被 ACS Publications 选为 The Journal of Physical Chemistry Letters 的整期 Front Cover。",
+    "image": "./assets/papers/jpclett-6c00898-front-cover.jpg",
     "url": "https://pubs.acs.org/doi/10.1021/acs.jpclett.6c00898",
     "featured": true
   },
