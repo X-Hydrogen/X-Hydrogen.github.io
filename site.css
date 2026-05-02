@@ -1174,7 +1174,7 @@ a {
 }
 
 .news-feed {
-  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  grid-template-columns: 1fr;
 }
 
 .news-card {
