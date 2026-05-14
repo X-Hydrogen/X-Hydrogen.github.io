@@ -31,7 +31,8 @@ const collaborationSummaryNode = document.getElementById("collaboration-node-sum
 const collaborationMetaNode = document.getElementById("collaboration-node-meta");
 
 const scholarProfileUrl = "https://scholar.google.com/citations?user=CcOsCzwAAAAJ&hl=en";
-const dataVersion = "20260502a";
+const scholarCacheKey = "xhydrogen-scholar-metrics-v1";
+const dataVersion = "20260514b";
 
 const defaultMapData = {
   center: {
@@ -269,17 +270,18 @@ const cutouts = [
 ];
 
 const staticMetrics = {
-  citations: 3175,
+  citations: 3302,
   hIndex: 30,
   citingScholars: 1319,
   institutions: 1180,
   countries: 42,
-  lastUpdated: "2026-04-28",
+  lastUpdated: "2026-05-14",
 };
 
 const scholarMessages = {
   loading: pageLang === "zh" ? "正在同步 Scholar" : "Syncing Scholar",
   live: pageLang === "zh" ? "已在线同步 Scholar" : "Scholar synced online",
+  cached: pageLang === "zh" ? "使用已同步 Scholar 记录" : "Using synced Scholar record",
   local: pageLang === "zh" ? "使用本地 Scholar 记录" : "Using local Scholar record",
   blocked: pageLang === "zh" ? "Scholar 在线同步受限，已使用本地记录" : "Scholar sync limited; local record shown",
   failed: pageLang === "zh" ? "数据暂不可用" : "Metrics temporarily unavailable",
@@ -330,11 +332,63 @@ const updateMetricNodes = (data) => {
   });
 };
 
+const scholarMetricKeys = ["citations", "hIndex", "citingScholars", "institutions", "countries"];
+
+const parseMetricValue = (value) => {
+  const numeric = Number(value);
+  return Number.isFinite(numeric) ? numeric : null;
+};
+
+const latestDateValue = (first, second) => {
+  if (!first) {
+    return second;
+  }
+  if (!second) {
+    return first;
+  }
+  return String(second) > String(first) ? second : first;
+};
+
+const mergeScholarMetrics = (base = {}, incoming = {}) => {
+  const merged = { ...base, ...incoming };
+  scholarMetricKeys.forEach((key) => {
+    const baseValue = parseMetricValue(base[key]);
+    const incomingValue = parseMetricValue(incoming[key]);
+    if (baseValue !== null && incomingValue !== null) {
+      merged[key] = Math.max(baseValue, incomingValue);
+    } else if (baseValue !== null) {
+      merged[key] = baseValue;
+    } else if (incomingValue !== null) {
+      merged[key] = incomingValue;
+    }
+  });
+  merged.lastUpdated = latestDateValue(base.lastUpdated, incoming.lastUpdated);
+  return merged;
+};
+
+const readCachedScholarMetrics = () => {
+  try {
+    const raw = window.localStorage?.getItem(scholarCacheKey);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+};
+
+const persistScholarMetrics = (data) => {
+  try {
+    window.localStorage?.setItem(scholarCacheKey, JSON.stringify(data));
+  } catch {
+    // Browser storage may be disabled; the visible metrics are still updated.
+  }
+};
+
 const scholarMetricSubset = (data) => ({
   citations: data.citations,
   hIndex: data.hIndex,
   citingScholars: data.citingScholars,
   institutions: data.institutions,
+  countries: data.countries,
   lastUpdated: data.lastUpdated,
 });
 
@@ -349,8 +403,9 @@ const setScholarStatus = (messageKey, data = {}) => {
   }
 };
 
-updateMetricNodes(staticMetrics);
-setScholarStatus("loading", staticMetrics);
+let scholarMetrics = mergeScholarMetrics(staticMetrics, readCachedScholarMetrics() || {});
+updateMetricNodes(scholarMetricSubset(scholarMetrics));
+setScholarStatus(scholarMetrics.lastUpdated === staticMetrics.lastUpdated ? "loading" : "cached", scholarMetrics);
 
 const parseScholarMetricsFromHtml = (html) => {
   const doc = new DOMParser().parseFromString(html, "text/html");
@@ -400,20 +455,33 @@ const fetchLiveScholarMetrics = () =>
 
 fetchLocalScholarMetrics()
   .then((response) => {
-    updateMetricNodes(scholarMetricSubset(response));
-    setScholarStatus("local", response);
+    scholarMetrics = mergeScholarMetrics(scholarMetrics, response);
+    updateMetricNodes(scholarMetricSubset(scholarMetrics));
+    setScholarStatus("local", scholarMetrics);
+    persistScholarMetrics(scholarMetrics);
     return fetchLiveScholarMetrics()
       .then((liveMetrics) => {
-        const merged = { ...response, ...liveMetrics };
-        updateMetricNodes(scholarMetricSubset(merged));
-        setScholarStatus("live", merged);
+        scholarMetrics = mergeScholarMetrics(scholarMetrics, liveMetrics);
+        updateMetricNodes(scholarMetricSubset(scholarMetrics));
+        setScholarStatus("live", scholarMetrics);
+        persistScholarMetrics(scholarMetrics);
       })
       .catch(() => {
-        setScholarStatus("blocked", response);
+        setScholarStatus("blocked", scholarMetrics);
       });
   })
   .catch(() => {
-    setScholarStatus("failed", staticMetrics);
+    return fetchLiveScholarMetrics()
+      .then((liveMetrics) => {
+        scholarMetrics = mergeScholarMetrics(scholarMetrics, liveMetrics);
+        updateMetricNodes(scholarMetricSubset(scholarMetrics));
+        setScholarStatus("live", scholarMetrics);
+        persistScholarMetrics(scholarMetrics);
+      })
+      .catch(() => {
+        updateMetricNodes(scholarMetricSubset(scholarMetrics));
+        setScholarStatus("failed", scholarMetrics);
+      });
   });
 
 const insideEllipse = (x, y, ellipse) => {
@@ -1203,10 +1271,6 @@ const renderImpactMap = (mapData) => {
   mapState.haloEls.clear();
   mapState.hoverNodeId = mapData.nodes.find((node) => node.id === "us")?.id || mapData.nodes[0]?.id || mapData.center.id;
   mapRoot.innerHTML = "";
-  updateMetricNodes({
-    citations: mapData.author?.citedByCount || staticMetrics.citations,
-    countries: mapData.nodes?.length || staticMetrics.countries,
-  });
 
   const dotLayer = createSvgNode("g");
   const haloLayer = createSvgNode("g");
